@@ -151,6 +151,31 @@ h1, .title1
   line-height: 56px
   color: #FFFFFF
 
+h6, .title6 
+  font-size: 12px
+  line-height: 16px
+  color: $gray-200
+  position: relative
+  z-index: 1  
+  text-transform: uppercase
+  span 
+    padding: 0 19px
+    display: block
+    width: fit-content
+  &:before
+    content: ''
+    +centerXY 
+    height: 1px
+    width: 100%
+    background-color: $bg-gray-100-1
+    z-index: -1
+
+.text
+  font-family: 'OpenSans', sans-serif
+  font-size: 16px
+  line-height: 28px
+  color: $brown
+
 .container 
   max-width: $desktop
   width: 100% 
@@ -160,8 +185,26 @@ h1, .title1
 .max-930 
   max-width: 930px 
 
+.max-1280
+  max-width: 1280px 
+  
+.icon-arrow-down 
+  fill: none 
+  stroke: $dark
+  +box(11px)
+  margin-left: 8px
+  transition: all 0.3s ease
+
 @import "modules/modules"
 
+.hidden-xy
+  overflow: hidden
+
+.bg-white
+  background-color: $bg-white 
+
+.bg-blue-navy
+  background-color: $bg-blue-navy
 
 .relative
   position: relative

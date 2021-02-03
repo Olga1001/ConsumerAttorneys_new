@@ -1,0 +1,23 @@
+.slider
+    margin-top: 85px
+    &-btn 
+        +box(52px)
+        border-radius: 50%
+        border: 1px solid $green
+    svg 
+        fill: none 
+        stroke: $green
+        +box(12px, 100%)
+        margin: 0 auto
+    &-item 
+        margin: 0 45px
+
+.dots 
+    button 
+        +box(12px)
+        background: rgba($bg-white, 0.3)
+        border-radius: 12px
+    &.active 
+        button
+            width: 28px
+            background: $bg-green

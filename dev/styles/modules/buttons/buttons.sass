@@ -9,6 +9,11 @@
     border-radius: 40px
     text-align: center
     padding: 0 32px
+    transition: all 0.3s ease
+    &:hover 
+        background: $bg-green-hover
+    &:focus 
+        background: $bg-green-pressed
 
 .btn-phone
     color: $white 
@@ -17,12 +22,15 @@
     line-height: 20px
     min-width: 205px
     svg 
-        fill: $white 
+        stroke: $white 
+        fill: none
         width: 20px 
         height: 20px
         margin-right: 8px
+        stroke-width: 1.4px
     .fs-10 
         margin-bottom: 6px
+        display: block
 
 .btn-play
     border: 1px solid $green
@@ -44,7 +52,9 @@
         width: 13px 
         height: 100% 
         margin: 0 auto 
-        fill: $white
+        fill: none
+        stroke: $black
+        stroke-width: 1.4px 
         position: relative
         z-index: 1
     &-border

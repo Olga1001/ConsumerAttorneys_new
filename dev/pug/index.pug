@@ -16,3 +16,77 @@ block content
 					div 
 						p.fs-12.text-up.c-green watch now
 						p.fs-24.c-white Play video
+
+		section.second-section
+			.container 
+				.about-block 
+					.text-center
+						.px-40
+							h6.title6
+								span.mx-auto.bg-white ABOUT US
+						img.mx-auto.my-40(src="img/logo/logo-icon.svg", alt="logo")
+						p.fs-24.my-40 Consumer Attorneys LLP is one of the top consumer <br> protection law firms in the United States.
+						p.text.max-1280.mx-auto We file lawsuits on behalf of consumers in federal courts nationwide to clean up their credit and background reports, challenge misleading debt collection letters and innovate effective solutions to many consumer finance problems. We specialize in uncovering mixed files, assisting victims of identity fraud and correcting inaccuracies in credit reports to help people get employment, housing and credit card financing.
+						.flex-wrap.about-block_cards 
+							- 
+								cardAbout = [
+									{
+										icon: 'trusted',
+										title: '4000',
+										name: 'Trusted Clients',
+										text: 'Resulted in thousands of increased credit scores.',
+									},
+									{
+										icon: 'verdicts',
+										title: '200,000',
+										name: 'Settlements and Verdicts',
+										text: 'Resulted of inaccurate and fraudulent accounts deleted.',
+									},
+									{
+										icon: 'protecting',
+										title: '10 years',
+										name: 'Protecting Consumers ',
+										text: 'Resulted in consumers getting jobs, homes and loans.',
+									},
+									{
+										icon: 'recovered',
+										title: '25 million',
+										name: 'Recovered',
+										text: 'Resulting in monetary recovery for our clients',
+									}
+								]
+							each val in cardAbout 
+								.card-about 
+									.card-about_border
+										+icon(val.icon)
+									.card-about_title=val.title
+									p.fw-bold.c-green.ff-opensans=val.name
+									img.mx-auto.my-12(src="img/common/arrow-long.svg", alt="arrow")
+									p.fw-light=val.text
+		section.third-section
+			.container 
+				h6.title6.text-center 
+					span.mx-auto.bg-blue-navy Featured in
+				.slider
+					.flex-center-between 
+						button.prev.slider-btn(type="button")
+							+icon("prev")
+						.flex-center-center.hidden-xy.px-20
+							a.slider-item(href="#")
+								img(src="img/logo/brand1.png", alt="brand")
+							a.slider-item(href="#")
+								img(src="img/logo/brand2.png", alt="brand")
+							a.slider-item(href="#")
+								img(src="img/logo/brand3.png", alt="brand")
+							a.slider-item(href="#")
+								img(src="img/logo/brand4.png", alt="brand")
+						button.next.slider-btn(type="button")
+							+icon("next")
+					ul.dots
+						li.active 
+							button(type="button")
+						li 
+							button(type="button")
+						li 
+							button(type="button")
+

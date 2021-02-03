@@ -1,4 +1,48 @@
 .first-section 
-    background: $bg-blue-navy
+    background: $bg-blue-navy url("../img/common/bg.jpg") no-repeat center / cover
     min-height: 800px 
     +d-flex(center)
+    padding-bottom: 60px
+
+.about-block 
+    background: $bg-white
+    box-shadow: $shadow2
+    border-radius: 4px
+    padding: 40px 20px 20px 20px
+    margin-top: -90px 
+    &_cards 
+        background: $bg-gray
+        border: 1px solid $gray-100-1
+        border-radius: 4px
+        padding: 40px 0
+        margin-top: 60px
+
+.card-about
+    width: 25%
+    padding: 0 44px
+    border-right: 1px solid $gray-100
+    &:last-child
+        border: none
+    &_border 
+        border-radius: 50%
+        width: 68px
+        height: 68px
+        border: 1px solid $green
+        margin: 0 auto 20px
+    &_title 
+        font-weight: 200
+        font-size: 44px
+        line-height: 56px
+    svg 
+        fill: none
+        stroke: $green
+        width: 35px 
+        height: 100% 
+        margin: 0 auto
+
+.second-section
+    padding-bottom: 80px
+
+.third-section
+    background: $bg-blue-navy
+    padding: 50px 0 30px

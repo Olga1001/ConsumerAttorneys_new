@@ -1,16 +1,15 @@
 header.header
-    .header-top
-        .header-container.flex-center-end  
-            ul.menutop
-                each val in ['Covid-19','Policies','Policies']
-                    li.menutop-item 
-                        a.menutop-link(href="#")=val
-            .topblock-green
+    .header-container.flex-center-end  
+        ul.menutop
+            each val in ['Covid-19','Policies','Case Evaluation']
+                li.menutop-item 
+                    a.menutop-link(href="#")=val
+        .topblock-green
     
     .header-container.header-main
         .flex-center-between 
             a.logo(href="#")
-                img(src="img/logo/logo_icon.png", alt="logo")
+                img(src="img/logo/logo.svg", alt="logo")
             .align-items-center
                 nav.navmenu 
                     ul.menu 
@@ -18,9 +17,9 @@ header.header
                             li.menu-item(class=index==0 ? 'active': '')
                                 if (index==1)
                                     .menu-link=val
-                                        +icon("", "arrow-down")
+                                        +icon("arrow-down")
                                     ul.menu-dropdown
-                                        each val in [{icon: '', title: 'Credit Reporting Errors'},{icon: '', title: 'Background Check Errors'},{icon: '', title: 'Identity Theft'},{icon: '', title: 'Debt Collection Harassment and Abuse'},{icon: '', title: 'Telemarketer Harassment'},{icon: '', title: 'Bankruptcy'},{icon: '', title: 'Consumer Finance Litigation'},{icon: '', title: 'Class Actions'},{icon: '', title: 'Personal Injury'},{icon: '', title: 'Americans with Disabilities Act'}]
+                                        each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
                                             li.menu-dropdown-item
                                                 a.align-items-center(href="#") 
                                                     .menu-dropdown-circle 
@@ -29,18 +28,18 @@ header.header
                                                 
                                 else if (index==2)
                                     .menu-link=val
-                                        +icon("", "arrow-down")
+                                        +icon("arrow-down")
                                     ul.menu-dropdown
                                         each val in ['About','Why Choose Us','Testimonials']
                                             li.menu-dropdown-item
-                                                a(href="#")=val 
+                                                a.align-items-center(href="#")=val 
                                 else 
                                     a.menu-link(href="#")=val
 
                 a.btn-phone(href="tel:8006040466")     
                     span.fs-10.text-up.l-t-4 Free case consultation 
                     span.align-items-center.fw-bold 
-                        +icon("")
+                        +icon("phone")
                         |800 604 0466
             button.burger(type="button")
                 span.burger-line.burger-line-top
