@@ -4,16 +4,59 @@
     font-weight: normal
     font-size: 14px
     line-height: 52px
-    color: #FFFFFF
+    color: $white
     background: $bg-green
     border-radius: 40px
     text-align: center
-    padding: 0 32px
+    padding: 0 30px
     transition: all 0.3s ease
     &:hover 
         background: $bg-green-hover
     &:focus 
         background: $bg-green-pressed
+    &:disabled
+        background: $bg-gray-100
+        color: $gray
+        
+.btn2
+    color: $brown
+    border: 1px solid $green 
+    background: transparent
+    max-width: 259px 
+    width: 100%
+    &:hover 
+        background: rgba($black, 0.04)
+    &:focus 
+        background: rgba($black, 0.04)
+        color: $green3
+    &:disabled
+        border-color: $gray-300
+
+.btn3 
+    color: $green 
+    border: 1px solid $green 
+    background: transparent
+    &:hover 
+        background: rgba($black, 0.04)
+    &:focus 
+        background: rgba($black, 0.04)
+        border-color: $green3
+        color: $green3
+    &:disabled
+        border-color: $gray-300
+
+.btn4
+    color: $white 
+    border: 1px solid $white 
+    background-color: transparent
+    width: fit-content
+    &:hover 
+        background: rgba($white, 0.08)
+    &:focus 
+        background: rgba($black, 0.14)
+    &:disabled
+        border-color: $gray
+        color: $gray
 
 .btn-phone
     color: $white 
@@ -23,11 +66,7 @@
     min-width: 205px
     svg 
         stroke: $white 
-        fill: none
-        width: 20px 
-        height: 20px
         margin-right: 8px
-        stroke-width: 1.4px
     .fs-10 
         margin-bottom: 6px
         display: block
@@ -84,5 +123,13 @@
             border-radius: 100%
             animation: ripple 3s infinite 
             z-index: -1;
-@media only screen and (max-width : 575px)
-    // 
+
+@media only screen and (max-width : 1199px)
+    .btn-phone
+        padding: 6px 16px
+    .btn-phone .fs-10
+        margin-bottom: 0
+
+@media only screen and (max-width : 767px)
+    .btn2
+        max-width: 100%

@@ -115,6 +115,7 @@ audio, canvas, iframe, img, svg, video, textarea
 
 svg 
   flex-shrink: 0
+  fill: none
   
 textarea
   resize: none
@@ -133,6 +134,7 @@ a
   text-decoration: none
   transition: all 0.3s ease
   color: $black
+  display: block
 
 input
   width: 100%
@@ -144,12 +146,30 @@ table
   border-collapse: collapse
   width: 100% 
 
+hr
+  border: none 
+  height: 1px 
+  background: $bg-gray-100
+  margin: 20px 0
+
 h1, .title1 
   font-style: normal
   font-weight: 600
   font-size: 40px
   line-height: 56px
-  color: #FFFFFF
+  color: $white
+
+h2, .title2
+  font-weight: 600
+  font-size: 52px
+  line-height: 72px
+
+h3, .title3       
+  font-weight: 600
+  font-size: 32px
+  line-height: 44px
+  color: $white
+
 
 h6, .title6 
   font-size: 12px
@@ -162,14 +182,24 @@ h6, .title6
     padding: 0 19px
     display: block
     width: fit-content
-  &:before
-    content: ''
-    +centerXY 
-    height: 1px
-    width: 100%
-    background-color: $bg-gray-100-1
-    z-index: -1
-
+    white-space: nowrap
+    &:before
+      content: ''
+      +centerXY 
+      height: 1px
+      width: 100%
+      background-color: $bg-gray-100-1
+      z-index: -1
+    &.bg-gray
+      &:before
+        background-color: $gray-200
+      
+  &.left 
+    span 
+      padding-left: 0
+      &:before
+        background-color: $gray-200
+  
 .text
   font-family: 'OpenSans', sans-serif
   font-size: 16px
@@ -180,14 +210,23 @@ h6, .title6
   max-width: $desktop
   width: 100% 
   margin: 0 auto 
-  padding: 0 15px
+  padding: 0 16px
   
 .max-930 
   max-width: 930px 
 
 .max-1280
   max-width: 1280px 
-  
+
+.max-805
+  max-width: 805px 
+
+.max-500
+  max-width: 500px 
+
+.max-245
+  max-width: 245px 
+
 .icon-arrow-down 
   fill: none 
   stroke: $dark
@@ -195,8 +234,57 @@ h6, .title6
   margin-left: 8px
   transition: all 0.3s ease
 
-@import "modules/modules"
+.icon-building 
+  fill: none 
+  stroke: $gray
+  +box(12px)
+  margin-right: 4px 
 
+.icon-phone 
+  fill: none 
+  stroke: $green 
+  stroke-width: 1.4px
+  +box(20px)
+  margin-right: 10px
+
+.icon-calendar
+  +box(15px)
+  fill: none 
+  stroke: $gray-300
+  
+.icon-arrow-right 
+  +box(15px)
+  fill: none 
+  stroke: $green
+
+.icon-facebook 
+  +box(10px,100%)
+  stroke-width: 1.2px
+
+.icon-instagram 
+  stroke-width: 1.2px
+  +box(14px,100%)
+
+.icon-twitter
+  stroke-width: 1.2px
+  +box(17px,100%)
+
+.icon-linkedin
+  stroke-width: 1.2px
+  +box(14px,100%)
+
+.circle2 
+  border: 0.8px solid $white
+  +box(19px)
+  border-radius: 50%
+
+.avatar 
+  +box(91px)
+  border-radius: 50% 
+  object-fit: cover
+
+@import "modules/modules"
+  
 .hidden-xy
   overflow: hidden
 
@@ -205,6 +293,21 @@ h6, .title6
 
 .bg-blue-navy
   background-color: $bg-blue-navy
+
+.bg-gray
+  background-color: $bg-gray
+
+.bg-gray-100
+  background-color: $bg-gray-100
+
+.bg-gray-100-1
+  background-color: $bg-gray-100-1
+
+.bg-gray-100-2
+  background-color: $bg-gray-100-2
+
+.bg-green
+  background-color: $bg-green
 
 .relative
   position: relative
@@ -220,7 +323,6 @@ h6, .title6
 
 .max-w-100
   max-width: 100%
-
 
 @keyframes ripple
   0% 

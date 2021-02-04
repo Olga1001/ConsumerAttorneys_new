@@ -1,2 +1,56 @@
 footer.footer
-    .container 
+    .footer-top
+        .container.relative 
+            img.img-union1(src="img/common/union-1.svg", alt="union") 
+            img.img-shield(src="img/common/shield.png", alt="shield") 
+            .flex-wrap.mb-lg-0.mb-8
+                .w-lg-50.pr-lg-14.w-100.mb-16.mb-lg-80 
+                    .case
+                        img.case-img(src="img/common/img.jpg", alt="image")
+                        .case-content 
+                            h3.title3 Free Case Review
+                            p.fs-14.c-white.mb-20 No fee unless we win your case. 
+                            a.btn.btn4(href="#") Get started
+                .w-lg-50.pl-lg-14.w-100.mb-16.mb-lg-80   
+                    .case 
+                        img.case-img(src="img/common/img.jpg", alt="image")
+                        .case-content 
+                            h3.title3 Free Case Review
+                            p.fs-14.c-white.mb-20 No fee unless we win your case. 
+                            a.btn.btn4(href="#") Get started
+            .flex-wrap
+                .w-lg-50.pr-lg-14.w-100.mb-lg-0.mb-8
+                    h6.title6.left.mb-24
+                        span.c-green.bg-gray-100-1 Contact Us
+                    .align-items-center.pt-12
+                        .circle 
+                            +icon("phone","c-dark mr-12")
+                        p.fs-20 (+1) 800 604 0466
+                    .align-items-center.pt-12
+                        .circle 
+                            +icon("mail","c-dark mr-12")
+                        p.fs-20 info@consumerattorneys.com
+                    ul.d-flex.socials 
+                        each val in ['facebook','instagram','twitter','linkedin']
+                            li 
+                                a.social(href="#")
+                                    +icon(val, "c-white")
+                .w-lg-50.pl-lg-14.w-100
+                    h6.title6.left.mb-24
+                        span.c-green.bg-gray-100-1 Practice Areas
+                    nav.flex-wrap.pt-12 
+                        ul.footermenu.w-sm-50
+                            each val in ['Credit Reporting Errors','Debt Collection Harassment and Abuse','Bankruptcy','Class Actions','Personal Injury']
+                                li.footermenu-item 
+                                    a.fs-14.mb-20(href="#")=val
+                        ul.footermenu.w-sm-50.pl-sm-15
+                            each val in ['Background Check Errors','Telemarketer Harassment','Consumer Finance Litigation','Data Breach Litigation','Americans with Disabilities Act']
+                                li.footermenu-item 
+                                    a.fs-14.mb-20(href="#")=val
+    .footer-bottom
+        .container.flex-wrap
+            p.fs-12.c-white.mr-12 © 2020 Consumer Attorneys. All Rights Reserved.
+            ul.d-flex 
+                each val in ['Privacy Policy', 'Terms of use']
+                    li  
+                        a.c-green.fs-12(href="#")=val

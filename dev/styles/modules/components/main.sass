@@ -45,4 +45,196 @@
 
 .third-section
     background: $bg-blue-navy
-    padding: 50px 0 30px
+    padding: 50px 0 24px
+
+.fourth-section
+    background: $bg-gray-100-1
+    padding: 120px 0 30px
+    border-bottom: 1px solid $gray-100
+
+.fifth-section
+    background: $bg-gray
+    padding: 120px 0 295px
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &:before 
+        content: ''
+        position: absolute 
+        left: 0 
+        bottom: 0
+        height: 270px 
+        width: 100%
+        background: $gradient
+        z-index: -1
+
+.img-union
+    +centerY 
+    right: -68px
+    +box(550px,560px)
+    z-index: -1
+
+.img-shield
+    +box(288px,260px)
+    +centerY 
+    left: -60px
+    z-index: -1
+
+.img-map 
+    max-width: 647px 
+    width: 100%
+    height: auto
+    margin-bottom: 9px
+
+.circlesmall
+    background: $bg-blue-navy
+    border-radius: 50%
+    +box(12px)
+    transition: all 0.3s ease
+    flex-shrink: 0
+
+.card-where
+    width: 50%
+    border-radius: 4px
+    transition: all 0.3s ease
+    position: relative
+    margin-bottom: -80px
+    margin-top: 15px
+    padding: 28px 35px 20px 35px
+    border: 1px solid transparent  
+    height: fit-content
+    .hide
+        opacity: 0
+        transition: opacity 0.3s ease
+    .circlesmall
+        width: 0
+
+    &:hover 
+        z-index: 2
+        background: $bg-white
+        border-color: $gray-100
+        box-shadow: $shadow3
+        .hide
+            opacity: 1
+        .circlesmall
+            width: 12px
+            margin-right: 8px
+    &_head
+        flex-wrap: wrap
+        +d-flex()
+
+.sixth-section
+    background: $bg-blue-navy
+    padding-bottom: 80px
+
+.testimonial 
+    background: $bg-white
+    box-shadow: $shadow2
+    border-radius: 4px    
+    margin-top: -150px
+    margin-bottom: 100px
+    padding: 74px 119px 60px
+    position: relative
+    z-index: 2
+
+.user-review 
+    width: 360px
+
+.text-review 
+    width:  calc(100% - 360px)
+
+.card-articles 
+    width: calc(25% - 21px)
+    margin-right: 28px 
+    background-color: $bg-white
+    margin-top: 20px
+    border-radius: 0px 0px 4px 4px
+    &:last-child
+        margin-right: 0
+    img 
+        width: 100% 
+        height: 220px 
+        object-fit: cover
+    &_content
+        padding: 28px 30px 40px
+    .slider-btn
+        +box(44px)
+    .icon-arrow-right 
+        +box(15px, 100%)
+        margin: 0 auto
+        display: block
+
+
+@media only screen and (min-width : 1200px)
+    .fifth-section .container
+        max-width: 1660px
+        padding: 0 60px 0 100px
+        
+@media only screen and (max-width : 1300px)
+    .card-about
+        padding: 0 20px
+
+@media only screen and (max-width : 1199px)
+    .icon-phone
+        +box(14px)
+    .card-about
+        width: 50%
+    .testimonial
+        padding: 30px 40px
+        margin-top: -115px
+    .card-articles
+        width: calc(50% - 10px)
+        margin-right: 20px
+        &:nth-child(2n+2)
+            margin-right: 0
+    .card-articles img
+        height: 314px
+    .card-where
+        padding: 28px 20px
+    .card-where_head 
+        display: block
+@media only screen and (max-width : 991px)
+    .card-where_head 
+        display: flex
+    .img-map
+        margin: 0 auto
+    .user-review, .text-review
+        width: 100%
+    .testimonial
+        margin-top: -150px
+    .fifth-section
+        padding-bottom: 230px
+@media only screen and (max-width : 767px)
+    .first-section 
+        background-image: url(../img/common/bg-mobile.jpg)
+        min-height: 573px
+    .about-block
+        margin-top: -39px
+        padding: 28px 16px 12px
+        .fs-24 
+            font-size: 20px 
+            line-height: 32px
+    .about-block_cards
+        margin-top: 28px
+        padding: 0 16px
+    .card-about
+        width: 100% 
+        border: none 
+        border-bottom: 1px solid $gray-100
+        padding: 28px 0
+    .second-section
+        padding-bottom: 40px
+    .third-section
+        padding-top: 28px
+    .fourth-section
+        padding-top: 32px
+        .fs-24 
+            font-size: 20px
+            line-height: 32px
+        .dots
+            padding-top: 0
+    .fifth-section
+        padding: 40px 0 200px
+    .card-articles 
+        width: 100% 
+        margin-right: 0

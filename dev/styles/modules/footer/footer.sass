@@ -1,9 +1,104 @@
 .footer
+    background: $gray-100-1 
+    z-index: 1
+    position: relative
+    overflow: hidden
+    &-top 
+        padding: 80px 0 55px
 
+    .img-shield
+        +box(224px,192px)
+        transform: none
+        top: -52px
+        left: -60px
+    &-bottom 
+        background: $bg-blue-navy
+        padding: 20px 0
+        ul li 
+            a 
+                padding: 0 12px 
+                border-left: 1px solid rgba($white, 0.1)
+                &:hover 
+                    color: $green4
+                    text-decoration: underline
+                &:focus 
+                    color: $green3
+                    text-decoration: underline
+
+            &:first-child a
+                border: none 
+                padding-left: 0
+    .circle
+        +box(52px)
+        svg 
+            width: 18px
+                
+
+
+.img-union1 
+    position: absolute 
+    top: -20px
+    right: -52px
+    z-index: 3
+    
+
+.socials 
+    margin-top: 32px
+
+.social 
+    border-radius: 50%
+    +box(40px)
+    background: $bg-blue-navy 
+    margin-right: 8px
+    transition: all 0.3s ease
+    margin-bottom: 20px
+    svg 
+        margin: 0 auto
+        display: block
+        transition: all 0.3s ease
+    &:hover 
+        background: $bg-green-hover
+        svg 
+            stroke: $white
+.footermenu 
+    a:hover 
+        color: $green
+
+.case 
+    border-radius: 8px
+    padding: 20px 32px 
+    position: relative
+    z-index: 1
+    box-shadow: $shadow2
+    overflow: hidden
+    &:before 
+        content: ''
+        position: absolute
+        left: 0 
+        top: 0 
+        +box(100%)
+        background: $gradient2
+        background-blend-mode: normal, normal, multiply
+        z-index: -1
+
+    .title3
+        margin-bottom: 4px
+    &-img 
+        position: absolute
+        left: 0 
+        top: 0 
+        width: 100% 
+        height: 100%
+        z-index: -2
+        object-fit: cover
 
 @media only screen and (max-width : 991px)
-    // 
+    .socials
+        margin-top: 16px
 @media only screen and (max-width : 767px)  
-    // 
+    .footer .circle
+        +box(40px)
+    .footer .circle svg
+        width: 14px
 @media only screen and (max-width : 575px)  
     // 

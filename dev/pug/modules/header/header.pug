@@ -1,10 +1,16 @@
 header.header
-    .header-container.flex-center-end  
-        ul.menutop
-            each val in ['Covid-19','Policies','Case Evaluation']
-                li.menutop-item 
-                    a.menutop-link(href="#")=val
-        .topblock-green
+    .header-container
+        .flex-xl-center-end.d-none 
+            ul.menutop
+                each val in ['Covid-19','Policies','Case Evaluation']
+                    li.menutop-item 
+                        a.menutop-link(href="#")=val
+            .topblock-green
+        a.btn-phone.d-xl-none.flex-center-between.bg-green
+            span.fs-10.text-up.l-t-4 Free case consultation
+            span.align-items-center.fw-bold.fs-14
+                +icon("phone")
+                |800 604 0466
     
     .header-container.header-main
         .flex-center-between 
@@ -22,7 +28,7 @@ header.header
                                         each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
                                             li.menu-dropdown-item
                                                 a.align-items-center(href="#") 
-                                                    .menu-dropdown-circle 
+                                                    .circle 
                                                         +icon(val.icon)
                                                     =val.title
                                                 
@@ -35,8 +41,13 @@ header.header
                                                 a.align-items-center(href="#")=val 
                                 else 
                                     a.menu-link(href="#")=val
+                    
+                    ul.menutop.d-lg-none
+                        each val in ['Covid-19','Policies','Case Evaluation']
+                            li.menutop-item 
+                                a.menutop-link(href="#")=val
 
-                a.btn-phone(href="tel:8006040466")     
+                a.btn-phone.d-xl-block.d-none(href="tel:8006040466")     
                     span.fs-10.text-up.l-t-4 Free case consultation 
                     span.align-items-center.fw-bold 
                         +icon("phone")

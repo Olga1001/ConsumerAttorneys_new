@@ -4,20 +4,76 @@
         +box(52px)
         border-radius: 50%
         border: 1px solid $green
-    svg 
-        fill: none 
-        stroke: $green
-        +box(12px, 100%)
-        margin: 0 auto
+        flex-shrink: 0
+        transition: all 0.3s ease
+        svg 
+            +box(10px, 100%)
+            margin: 0 auto
+        &:hover 
+            background: rgba($black, 0.04)
+        &:focus
+            background: rgba($black, 0.08)
+        &:disabled 
+            background: $bg-gray-100
+            border-color: $gray-300
     &-item 
         margin: 0 45px
+    &-row 
+        +d-flex(center,center)
 
+.icon-prev, .icon-next
+    fill: none 
+    stroke: $green
+    +box(12px)
+    
 .dots 
+    padding-top: 42px
+    +d-flex(center)
     button 
         +box(12px)
         background: rgba($bg-white, 0.3)
         border-radius: 12px
-    &.active 
+        margin: 0 6px
+        transition: all 0.3s ease
+    li.active 
         button
             width: 28px
             background: $bg-green
+
+.slide-areas 
+    width: 329px 
+    flex-shrink: 0
+    padding: 28px 15px 28px 28px
+    background: $bg-white
+    border: 1px solid $gray-100
+    box-shadow: $shadow3
+    border-radius: 4px
+    margin-right: 28px
+    margin-bottom: 5px
+    line-height: 20px
+    .circle 
+        +box(60px)
+        margin-right: 16px
+        svg 
+            width: 25px
+
+.slider2 
+    margin-top: 20px
+
+@media only screen and (max-width : 1199px)
+    .slider-item
+        margin: 0 20px
+        width: 170px
+        flex-shrink: 0
+
+@media only screen and (max-width : 767px)
+    .slider-row
+        justify-content: flex-start
+    .slider
+        margin-top: 48px
+    .slider2
+        margin-top: 0
+    .slide-areas
+        width: 259px
+        padding: 16px 20px
+        margin-right: 20px
