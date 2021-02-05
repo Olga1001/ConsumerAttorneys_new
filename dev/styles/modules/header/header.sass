@@ -40,17 +40,10 @@
     +d-flex(center)
     &-link
         font-size: 14px
-        line-height: 20px
-        padding: 0 24px
-        barder-left: 1px solid $gray-100
-        +d-flex(center)
+        line-height: 1
         cursor: pointer
         transition: all 0.3s ease
-    &-item
-        padding: 34px 0
-        position: relative
-        &:first-child
-            border-left: none
+        padding: 37px 0
         &:before 
             content: ''
             background: $bg-green
@@ -63,20 +56,30 @@
             transition: all 0.3s ease
             opacity: 0
             z-index: 2
+    &-main
+        border-left: 1px solid $gray-100
+        padding: 0 24px
+        +d-flex(center)
+        transition: all 0.3s ease
+    &-item
+        position: relative
+        &:first-child .menu-main
+            border-left: none
         &.active
             .menu-link
-                font-weight: 600
-            &:before 
-                opacity: 1
-        &:hover 
-            &:before 
+                border-color: transparent
+            .menu-link:before 
                 opacity: 1
                 z-index: 3
-            .menu-dropdown 
-                opacity: 1
-                pointer-events: auto
             .icon-arrow-down
                 transform: scaleY(-1)
+        &.active-page
+            .menu-link
+                font-weight: 600
+                border-color: $gray-100
+            .menu-link:before 
+                opacity: 1
+                z-index: 3
 
 .circle  
     border: 1px solid $green
@@ -95,11 +98,10 @@
         transition: all 0.3s ease
         
 .menu-dropdown 
-    opacity: 0 
-    pointer-events: none
+    display: none
     +centerX 
-    top: 100%
-    transition: all 0.3s ease
+    top: calc(100% - 1px)
+    transition: none
     background: $bg-white
     border: 1px solid $gray-100-1
     box-shadow: $shadow
@@ -166,46 +168,59 @@
         top: 100%
         left: 0 
         width: 100% 
-        z-index: 8b
+        z-index: 8
         background-color: $bg-gray
         padding: 12px 0 0 0
         display: none
     .menu 
         display: block 
-        padding: 0 16px
-    .menu-item
-        padding: 0
-        border-bottom: 1px solid $gray-100
-    .menu-item:before
-        top: 24px
+    .menu-main
+        padding: 0 
+        justify-content: space-between
+        border: none
+    .menu-link:before
+        top: 21px
         left: 0
         transform: none
     .menu-link
-        text-align: left
-        justify-content: space-between
         padding: 20px 0
-        &:focus ~  .menu-dropdown, &:hover ~  .menu-dropdown  
-            display: block
+        text-align: left
+        border-bottom: 1px solid $gray-100
+        position: relative
+    .menu-item
+        padding: 0 16px
+        margin-top: -1px
+        &:last-child .menu-link
+            border: none
+        &:hover 
+            background-color: #EFEFF4
+        &.active
+            .menu-link
+                font-weight: 600
+            .menu-main
+                padding-left: 27px
+        &.active-page
+            .menu-main
+                padding-left: 27px
     .menu-dropdown
         position: initial
         transform: none
         background: transparent
-        opacity: 1
         max-width: 100% 
         box-shadow: none
         border: none
-        margin-top: -12px
         display: none
-        &:hover 
-            display: block
+        margin: -8px 0 0 0
+        padding-bottom: 7px
+        width: 100%
     .menu-dropdown-item
         background: transparent
         border: none
-    .menu-item
-        &.active, &:hover 
-            .menu-link
-                padding-left: 24px
-    
+    .menu-dropdown-item:hover
+        background: transparent
+    .menu-dropdown-item a 
+        padding-right: 0 
+        padding-left: 0
     .logo img 
         +box(156px,40px)
     .header-main
@@ -215,6 +230,7 @@
         padding: 24px 16px 32px
         border: none
         background-color: $bg-gray-100-1
+        border-top: 1px solid $gray-100
     .menutop-item
         border: none
     .menutop-link 

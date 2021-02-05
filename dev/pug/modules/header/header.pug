@@ -20,10 +20,11 @@ header.header
                 nav.navmenu 
                     ul.menu 
                         each val, index in ['Home','Practice Areas','About Us','Attorneys','News','Contact Us']
-                            li.menu-item(class=index==0 ? 'active': '')
+                            li.menu-item(class=index==0 ? 'active active-page': '')
                                 if (index==1)
-                                    .menu-link=val
-                                        +icon("arrow-down")
+                                    .menu-link
+                                        .menu-main=val
+                                            +icon("arrow-down")
                                     ul.menu-dropdown
                                         each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
                                             li.menu-dropdown-item
@@ -33,14 +34,16 @@ header.header
                                                     =val.title
                                                 
                                 else if (index==2)
-                                    .menu-link=val
-                                        +icon("arrow-down")
+                                    .menu-link
+                                        .menu-main=val
+                                            +icon("arrow-down")
                                     ul.menu-dropdown
                                         each val in ['About','Why Choose Us','Testimonials']
                                             li.menu-dropdown-item
                                                 a.align-items-center(href="#")=val 
                                 else 
-                                    a.menu-link(href="#")=val
+                                    a.menu-link(href="#")
+                                        span.menu-main=val
                     
                     ul.menutop.d-lg-none
                         each val in ['Covid-19','Policies','Case Evaluation']

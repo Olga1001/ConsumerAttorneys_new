@@ -283,8 +283,22 @@ h6, .title6
   border-radius: 50% 
   object-fit: cover
 
-@import "modules/modules"
+.line-basis 
+  flex-basis: 37.5%
   
+.circlesmall
+    background: $bg-blue-navy
+    border-radius: 50%
+    +box(12px)
+    transition: all 0.3s ease
+    flex-shrink: 0
+    
+@import "modules/modules"
+ 
+.hide
+  opacity: 0
+  transition: opacity 0.3s ease 
+
 .hidden-xy
   overflow: hidden
 

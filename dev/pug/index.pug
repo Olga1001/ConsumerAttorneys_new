@@ -8,14 +8,15 @@ block content
 		section.first-section
 			.container.max-930 
 				h1.title1.text-center Protecting consumers against debt collectors, background check companies, and credit reporting agencies.
-				.flex-center-center.mt-sm-80.mt-40
+				.flex-sm-center-center.mt-sm-80.mt-40
 					a.btn(href="#") Free Case Review
-					button.btn-play(type="button")
-						span.btn-play-border
-						+icon("play")
-					div 
-						p.fs-12.text-up.c-green watch now
-						p.fs-24.c-white Play video
+					.flex-center-center
+						button.btn-play(type="button")
+							span.btn-play-border
+							+icon("play")
+						div 
+							p.fs-12.text-up.c-green watch now
+							p.fs-24.c-white Play video
 
 		section.second-section
 			.container 
@@ -24,7 +25,7 @@ block content
 						.px-40
 							h6.title6
 								span.mx-auto.bg-white ABOUT US
-						img.mx-auto.my-40(src="img/logo/logo-icon.svg", alt="logo")
+						img.mx-auto.mt-40.mb-sm-40.mb-20(src="img/logo/logo-icon.svg", alt="logo")
 						p.fs-24.my-md-40.my-28 Consumer Attorneys LLP is one of the top consumer <br class="d-md-block d-none"> protection law firms in the United States.
 						p.text.max-1280.mx-auto We file lawsuits on behalf of consumers in federal courts nationwide to clean up their credit and background reports, challenge misleading debt collection letters and innovate effective solutions to many consumer finance problems. We specialize in uncovering mixed files, assisting victims of identity fraud and correcting inaccuracies in credit reports to help people get employment, housing and credit card financing.
 						.flex-wrap.about-block_cards 
@@ -92,9 +93,9 @@ block content
 					h2.title2.mb-24 Our Practice Areas
 					a.btn.mb-md-24.mb-40(href="#") Explore more
 				.flex-center-between.flex-wrap.pb-md-36 
-					.w-lg-50.mb-24
+					.w-lg-50.mb-28
 						p.fs-24 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem.
-					.w-lg-50.mb-24.pl-lg-20 
+					.w-lg-50.mb-28.pl-lg-20 
 						p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam.
 				.slider2
 					.d-flex.hidden-xy
@@ -103,7 +104,7 @@ block content
 								.circle 
 									+icon(val.icon)
 								=val.title
-				.flex-center-between.pt-md-0.pt-30
+				.flex-center-between.pt-md-0.pt-sm-30.pt-20
 					button.prev.slider-btn2(type="button")
 						+icon("prev", "c-green")
 					ul.dots.mx-auto
@@ -122,132 +123,19 @@ block content
 				h6.title6.max-500.mx-auto.mb-md-0.mb-10 
 					span.c-green.bg-gray.mx-auto Practice Areas
 				.text-center
-					h2.title2.mb-24 Where we practice
-					p.fs-24.mt-md-40.mb-24 We represent consumers nationwide.
+					h2.title2.mb-sm-24.mb-16 Where we practice
+					p.fs-24.mt-md-40.mb-24.pt-12 We represent consumers nationwide.
 				.flex-md-center-center
 					a.btn.btn2(href="#") Free Case Review
 					p.fs-12.text-up.c-gray-200.px-20.py-12.text-center or
 					a.btn.btn2(href="#") Free Credit Report Analysis
-				.flex-wrap.flex-start-between.mt-md-80.mt-40 
-					.w-lg-50.w-100 
-						img.img-map(src="img/common/map.png", alt="map")
-						h6.title6.left.max-245.mb-16
-							span.c-gray-200.bg-gray Legend
-						.align-items-center 
-							.circle2.bg-green.mr-12
-							p.fs-12.c-gray State where we can represent you
-						
-					.w-lg-50.w-100.flex-wrap 
-						- 
-							cardWhere = [
-								{
-									city: 'New York',
-									place: 'Head Office',
-									address: '300 Cadman Plaza West, 12th Floor Brooklyn, New York, 11201',
-									phone: '800-604-0466'
-								},
-								{
-									city: 'New York',
-									place: 'Head Office',
-									address: '300 Cadman Plaza West, 12th Floor Brooklyn, New York, 11201',
-									phone: '800-604-0466'
-								},
-								{
-									city: 'New York',
-									place: 'Head Office',
-									address: '300 Cadman Plaza West, 12th Floor Brooklyn, New York, 11201',
-									phone: '800-604-0466'
-								},
-								{
-									city: 'Florida',
-									place: 'Head Office',
-									address: '1221 Brickell Avenue, Suite 900, Miami, Florida, 33131',
-									phone: '800-604-0466'
-								},
-								{
-									city: 'Arizona',
-									place: 'Head Office',
-									address: '7047 E. Greenway Parkway, Suite 250, Scottsdale, Arizona, 85254',
-									phone: '800-604-0466'
-								},
-								{
-									city: 'Chicago',
-									place: 'Head Office',
-									address: '225 W. Washington Street, Suite 2200 Chicago, IL 60606',
-									phone: '800-604-0466'
-								},
-
-							]
-						each val in cardWhere
-							.card-where
-								.card-where_head.mb-16 
-									.align-items-center 
-										.circlesmall
-										p.fs-20=val.city
-									.align-items-center.hide 
-										+icon("building")
-										p.fs-14.c-gray.ff-opensans=val.place 
-								p.fs-14.ff-opensans.c-brown=val.address
-								.hide
-									hr
-									a.align-items-center(href="#") 
-										+icon("phone","mr-10")
-										span.c-green.fw-semi=val.phone 
+					
+				include layout/map
+				
 		section.sixth-section
 			.container
-				.testimonial 
-					.align-items-center.flex-wrap 
-						.mb-24.align-items-center.user-review
-							img.avatar.mr-28(src="img/common/avatar.jpg", alt="avatar")
-							div
-								p.fs-24 Camille Martin 
-								p.fs-12.c-gray-200 Boston, Massachusetts
-						p.text.mb-24.text-review Amazing firm! I worked predominantly with Daniel which was a great experience. He was very informative and stayed in contact with me throughout my case.
-					.justify-content-end 
-						a.btn(href="#") Learn more 
-						button.prev.slider-btn.ml-sm-20.ml-16(type="button")
-							+icon("prev")
-						button.next.slider-btn.ml-sm-20.ml-16(type="button")
-							+icon("next")
-				h6.title6.left.mb-md-20.mb-10 
-					span.c-green.bg-blue-navy News
-				.flex-center-between.pb-md-36
-					h2.title2.c-white Latest Articles
-					a.btn.btn3.d-md-block.d-none(href="#") View all news
-				.flex-wrap.justify-content-center 
-					- 
-						cardArticles = [
-							{
-								title: 'What does mixed mean on credit report deletion ',
-								text: 'Sometimes a consumer’s credit report can get dragged down by dead weight.'
-							},
-							{
-								title: 'When an employer does a background check',
-								text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...'
-							},
-							{
-								title: 'How to win a debt collection lawsuit',
-								text: 'The fair debt collection practices act prohibits which of the following practices?'
-							},
-							{
-								title: 'How does a landlord do a background check',
-								text: 'Automated housing discrimination: what do landlord look for in background checks?'
-							}
-						]
-					each val in cardArticles
-						.card-articles 
-							a(href="#")
-								img(src="img/common/img.jpg", alt="image")
-							.card-articles_content 
-								.flex-center-between.mb-16 
-									.align-items-center 
-										+icon("calendar","mr-12")
-										p.fs-12.c-gray-200 27.10.2020
-									hr.line-basis 
-									a.slider-btn(href="#")
-										+icon("arrow-right")
-								a.fs-24.mb-20(href="#")=val.title
-								p.text.fs-14=val.text
+				include layout/testimonial
+				include layout/news
 
 
 

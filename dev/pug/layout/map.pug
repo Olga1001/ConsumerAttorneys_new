@@ -1,0 +1,65 @@
+.flex-wrap.flex-start-between.mt-md-80.mt-40 
+    .w-lg-50.w-100 
+        img.img-map(src="img/common/map.png", alt="map")
+        h6.title6.left.max-245.mb-16
+            span.c-gray-200.bg-gray Legend
+        .align-items-center.mb-sm-0.mb-16 
+            .circle2.bg-green.mr-12
+            p.fs-12.c-gray State where we can represent you
+        
+    .w-lg-50.w-100.flex-wrap 
+        - 
+            cardWhere = [
+                {
+                    city: 'New York',
+                    place: 'Head Office',
+                    address: '300 Cadman Plaza West, 12th Floor Brooklyn, New York, 11201',
+                    phone: '800-604-0466'
+                },
+                {
+                    city: 'New York',
+                    place: 'Head Office',
+                    address: '300 Cadman Plaza West, 12th Floor Brooklyn, New York, 11201',
+                    phone: '800-604-0466'
+                },
+                {
+                    city: 'New York',
+                    place: 'Head Office',
+                    address: '300 Cadman Plaza West, 12th Floor Brooklyn, New York, 11201',
+                    phone: '800-604-0466'
+                },
+                {
+                    city: 'Florida',
+                    place: 'Head Office',
+                    address: '1221 Brickell Avenue, Suite 900, Miami, Florida, 33131',
+                    phone: '800-604-0466'
+                },
+                {
+                    city: 'Arizona',
+                    place: 'Head Office',
+                    address: '7047 E. Greenway Parkway, Suite 250, Scottsdale, Arizona, 85254',
+                    phone: '800-604-0466'
+                },
+                {
+                    city: 'Chicago',
+                    place: 'Head Office',
+                    address: '225 W. Washington Street, Suite 2200 Chicago, IL 60606',
+                    phone: '800-604-0466'
+                },
+
+            ]
+        each val in cardWhere
+            .card-where
+                .card-where_head.mb-16 
+                    .align-items-center 
+                        .circlesmall
+                        p.fs-20=val.city
+                    .align-items-center.hide-sm 
+                        +icon("building")
+                        p.fs-14.c-gray.ff-opensans=val.place 
+                p.fs-14.ff-opensans.c-brown=val.address
+                .hide.card-where_bottom
+                    hr
+                    a.align-items-center(href="#") 
+                        +icon("phone","mr-10")
+                        span.c-green.fw-semi=val.phone 

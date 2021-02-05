@@ -1,0 +1,59 @@
+.img-map 
+    max-width: 647px 
+    width: 100%
+    height: auto
+    margin-bottom: 9px
+
+.card-where
+    width: 50%
+    border-radius: 4px
+    position: relative
+    margin-bottom: -80px
+    margin-top: 15px
+    padding: 28px 35px 20px 35px
+    height: fit-content
+    z-index: 1
+    border: 1px solid transparent  
+    transition: all 0.3s ease
+    .circlesmall
+        width: 0
+
+    &:hover 
+        z-index: 2
+        background: $bg-white
+        border-color: $gray-100
+        box-shadow: $shadow3
+        .hide, .hide-sm 
+            opacity: 1
+        .circlesmall
+            width: 12px
+            margin-right: 8px
+    &_head
+        flex-wrap: wrap
+        +d-flex()
+@media only screen and (max-width : 1199px)
+    .card-where
+        padding: 28px 20px
+    .card-where_head 
+        display: block
+@media only screen and (max-width : 991px)
+    .img-map
+        margin: 0 auto 9px
+    .card-where_head 
+        display: flex
+@media only screen and (max-width : 575px)
+    .card-where
+        width: 100%
+        padding: 24px 0
+        border-top: 1px solid $gray-100
+        margin: 0 
+        &:first-child
+            border: none
+        &:hover 
+            background-color: transparent
+            box-shadow: none
+            border-color: $gray-100 transparent transparent transparent
+    .card-where_bottom
+        display: none
+    .card-where .circlesmall
+        display: none

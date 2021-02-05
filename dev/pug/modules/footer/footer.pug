@@ -1,8 +1,8 @@
 footer.footer
     .footer-top
         .container.relative 
-            img.img-union1(src="img/common/union-1.svg", alt="union") 
-            img.img-shield(src="img/common/shield.png", alt="shield") 
+            img.img-union1.d-sm-block.d-none(src="img/common/union-1.svg", alt="union") 
+            img.img-shield.d-sm-block.d-none(src="img/common/shield.png", alt="shield") 
             .flex-wrap.mb-lg-0.mb-8
                 .w-lg-50.pr-lg-14.w-100.mb-16.mb-lg-80 
                     .case
@@ -15,14 +15,14 @@ footer.footer
                     .case 
                         img.case-img(src="img/common/img.jpg", alt="image")
                         .case-content 
-                            h3.title3 Free Case Review
-                            p.fs-14.c-white.mb-20 No fee unless we win your case. 
+                            h3.title3 Free Credit Report Analysis
+                            p.fs-14.c-white.mb-20 Duis mollis, est non commodo luctus.
                             a.btn.btn4(href="#") Get started
             .flex-wrap
                 .w-lg-50.pr-lg-14.w-100.mb-lg-0.mb-8
                     h6.title6.left.mb-24
                         span.c-green.bg-gray-100-1 Contact Us
-                    .align-items-center.pt-12
+                    .align-items-center.pt-sm-12
                         .circle 
                             +icon("phone","c-dark mr-12")
                         p.fs-20 (+1) 800 604 0466
@@ -38,19 +38,19 @@ footer.footer
                 .w-lg-50.pl-lg-14.w-100
                     h6.title6.left.mb-24
                         span.c-green.bg-gray-100-1 Practice Areas
-                    nav.flex-wrap.pt-12 
-                        ul.footermenu.w-sm-50
+                    nav.flex-wrap.pt-sm-12 
+                        ul.footermenu.w-sm-50.w-100
                             each val in ['Credit Reporting Errors','Debt Collection Harassment and Abuse','Bankruptcy','Class Actions','Personal Injury']
                                 li.footermenu-item 
-                                    a.fs-14.mb-20(href="#")=val
-                        ul.footermenu.w-sm-50.pl-sm-15
+                                    a.fs-14.mb-sm-20.mb-10(href="#")=val
+                        ul.footermenu.w-sm-50.pl-sm-15.w-100
                             each val in ['Background Check Errors','Telemarketer Harassment','Consumer Finance Litigation','Data Breach Litigation','Americans with Disabilities Act']
                                 li.footermenu-item 
-                                    a.fs-14.mb-20(href="#")=val
+                                    a.fs-14.mb-sm-20.mb-10(href="#")=val
     .footer-bottom
         .container.flex-wrap
-            p.fs-12.c-white.mr-12 © 2020 Consumer Attorneys. All Rights Reserved.
-            ul.d-flex 
+            p.fs-12.c-white.mr-12.mb-10 © 2020 Consumer Attorneys. All Rights Reserved.
+            ul.d-flex.mb-10 
                 each val in ['Privacy Policy', 'Terms of use']
                     li  
                         a.c-green.fs-12(href="#")=val
