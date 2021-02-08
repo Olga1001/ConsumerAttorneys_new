@@ -1,142 +1,20 @@
-extends layout/main
+extends layout/main-case
 
 block variables
-	-var title = 'Главная страница'
+	-var title = 'Case Evaluation - step 1'
 
 block content
-	main.main
-		section.first-section
-			.container.max-930 
-				h1.title1.text-center Protecting consumers against debt collectors, background check companies, and credit reporting agencies.
-				.flex-sm-center-center.mt-sm-80.mt-40
-					a.btn(href="#") Free Case Review
-					.flex-center-center
-						button.btn-play(type="button")
-							span.btn-play-border
-							+icon("play")
-						div 
-							p.fs-12.text-up.c-green watch now
-							p.fs-24.c-white Play video
-
-		section.second-section
-			.container 
-				.about-block 
-					.text-center
-						.px-40
-							h6.title6
-								span.mx-auto.bg-white ABOUT US
-						img.mx-auto.mt-40.mb-sm-40.mb-20(src="img/logo/logo-icon.svg", alt="logo")
-						p.fs-24.my-md-40.my-28 Consumer Attorneys LLP is one of the top consumer <br class="d-md-block d-none"> protection law firms in the United States.
-						p.text.max-1280.mx-auto We file lawsuits on behalf of consumers in federal courts nationwide to clean up their credit and background reports, challenge misleading debt collection letters and innovate effective solutions to many consumer finance problems. We specialize in uncovering mixed files, assisting victims of identity fraud and correcting inaccuracies in credit reports to help people get employment, housing and credit card financing.
-						.flex-wrap.about-block_cards 
-							- 
-								cardAbout = [
-									{
-										icon: 'trusted',
-										title: '4000',
-										name: 'Trusted Clients',
-										text: 'Resulted in thousands of increased credit scores.',
-									},
-									{
-										icon: 'verdicts',
-										title: '200,000',
-										name: 'Settlements and Verdicts',
-										text: 'Resulted of inaccurate and fraudulent accounts deleted.',
-									},
-									{
-										icon: 'protecting',
-										title: '10 years',
-										name: 'Protecting Consumers ',
-										text: 'Resulted in consumers getting jobs, homes and loans.',
-									},
-									{
-										icon: 'recovered',
-										title: '25 million',
-										name: 'Recovered',
-										text: 'Resulting in monetary recovery for our clients',
-									}
-								]
-							each val in cardAbout 
-								.card-about 
-									.card-about_border
-										+icon(val.icon)
-									.card-about_title=val.title
-									p.fw-bold.c-green.ff-opensans=val.name
-									img.mx-auto.my-12(src="img/common/arrow-long.svg", alt="arrow")
-									p.fw-light=val.text
-		section.third-section
-			.container 
-				h6.title6.text-center 
-					span.mx-auto.bg-blue-navy Featured in
-				.slider
-					.flex-center-between 
-						button.prev.slider-btn(type="button")
-							+icon("prev")
-						.slider-row.hidden-xy.mx-20
-							each val in ['brand1.png', 'brand2.png', 'brand3.png', 'brand4.png']
-								a.slider-item(href="#")
-									img(src="img/logo/"+val, alt="brand")
-						button.next.slider-btn(type="button")
-							+icon("next")
-					ul.dots
-						li.active 
-							button(type="button")
-						li 
-							button(type="button")
-						li 
-							button(type="button")
-		section.fourth-section
-			.container 
-				h6.title6.left.mb-md-20.mb-10 
-					span.c-green.bg-gray-100-1 Practice Areas
-				.flex-md-center-between.pb-md-36
-					h2.title2.mb-24 Our Practice Areas
-					a.btn.mb-md-24.mb-40(href="#") Explore more
-				.flex-center-between.flex-wrap.pb-md-36 
-					.w-lg-50.mb-28
-						p.fs-24 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem.
-					.w-lg-50.mb-28.pl-lg-20 
-						p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam.
-				.slider2
-					.d-flex.hidden-xy
-						each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
-							a.align-items-center.slide-areas(href="#") 
-								.circle 
-									+icon(val.icon)
-								=val.title
-				.flex-center-between.pt-md-0.pt-sm-30.pt-20
-					button.prev.slider-btn2(type="button")
-						+icon("prev", "c-green")
-					ul.dots.mx-auto
-						li.active 
-							button.bg-gray-100(type="button")
-						li 
-							button.bg-gray-100(type="button")
-						li 
-							button.bg-gray-100(type="button")
-					button.next.slider-btn2(type="button")
-						+icon("next", "c-green")
-		section.fifth-section
-			img.img-union.d-lg-block.d-none(src="img/common/union.svg", alt="union")
-			.container.relative 
-				img.img-shield.d-lg-block.d-none(src="img/common/shield.png", alt="shield")
-				h6.title6.max-500.mx-auto.mb-md-0.mb-10 
-					span.c-green.bg-gray.mx-auto Practice Areas
+	main.main.main-case
+		include modules/header/header2
+		.align-items-center.main-case_container.mx-auto
+			.mx-auto
+				h4.title4.text-center.c-white.pb-8.mb-md-40.mb-20  Select an option that describes your case:
+				a.mb-12.flex-center-between.case-select(href="#") 
+					span My credit report has mistakes
+					+icon("next")
 				.text-center
-					h2.title2.mb-sm-24.mb-16 Where we practice
-					p.fs-24.mt-md-40.mb-24.pt-12 We represent consumers nationwide.
-				.flex-md-center-center
-					a.btn.btn2(href="#") Free Case Review
-					p.fs-12.text-up.c-gray-200.px-20.py-12.text-center or
-					a.btn.btn2(href="#") Free Credit Report Analysis
-					
-				include layout/map
-				
-		section.sixth-section
-			.container
-				include layout/testimonial
-				include layout/news
-
-
-
-
+					img.main-case_logo.mx-auto.mb-md-60.mb-40(src="img/logo/logo-icon-white.svg", alt="logo")
+					.max-600.mx-auto
+						p.fs-24.c-white.mb-20 Cras justo odio, dapibus ac facilisis in, egestas  eget quam. Aenean eu leo quam.
+						p.c-white.mb-md-60.mb-40 Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+					a.btn.max-444.mx-auto(href="#")  Continue

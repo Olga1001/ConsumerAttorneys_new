@@ -79,15 +79,17 @@
                 border-color: $gray-100
             .menu-link:before 
                 opacity: 1
-                z-index: 3
+                z-index: 2
 
 .circle  
     border: 1px solid $green
     +box(40px)
     border-radius: 50%
     flex-shrink: 0
-    margin-right: 12px
     transition: all 0.3s ease
+    color: $white
+    line-height: 38px
+    text-align: center
     svg 
         width: 18px 
         height: 100% 
@@ -96,6 +98,8 @@
         fill: none 
         stroke: $green
         transition: all 0.3s ease
+    &.big 
+        +box(52px)
         
 .menu-dropdown 
     display: none
@@ -110,6 +114,8 @@
     width: max-content
     overflow: hidden
     z-index: 2
+    .circle  
+        margin-right: 12px
     &-item 
         border-bottom: 1px solid $gray-100-1
         transition: all 0.3s ease
@@ -128,7 +134,6 @@
                 stroke: $white
             .circle 
                 background: $bg-green
-
 
 .burger
     +box(27px,14px)
@@ -157,6 +162,17 @@
         .burger-line-bottom
             top: 50% 
             transform: translate(-50%,-50%) rotate(-225deg)
+
+.header2 
+    position: relative
+    &-container
+        max-width: 1600px
+        margin: 0 auto 
+        padding: 36px 28px
+        border-bottom: 1px solid rgba($gray-200, 0.2)
+    .logo 
+        img 
+            +box(173px,52px)
 
 @media only screen and (min-width : 992px)
     .burger
@@ -235,3 +251,8 @@
         border: none
     .menutop-link 
         padding: 8px 0
+    .header2-container
+        padding: 18px 16px
+    .header2 .logo img
+        +box(132px,36px)
+            

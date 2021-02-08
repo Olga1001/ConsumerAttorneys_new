@@ -1,0 +1,20 @@
+.main-case
+    background: $bg-blue-navy url("../img/common/bg2.jpg") no-repeat center / cover
+    min-height: calc(100vh - 56px)
+    &_logo
+        +box(139px,142px)
+    &_container 
+        max-width: 718px
+        padding: 15px 16px 40px
+        min-height: calc(100vh - 56px - 125px)
+
+@media only screen and (max-width : 767px)
+    .main-case_logo
+        +box(120px,123px)
+    .main-case
+        background-image: url("../img/common/bg2-mob.jpg")
+    .main-case_container
+        padding: 40px 16px
+@media only screen and (max-width : 375px)
+    .main-case
+        min-height: calc(100vh - 82px)
