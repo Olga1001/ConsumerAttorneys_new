@@ -9,12 +9,7 @@ block content
 		.align-items-center.main-case_container.mx-auto
 			.mx-auto
 				h4.title4.text-center.c-white.pb-8.mb-md-40.mb-20  Select an option that describes your case:
-				a.mb-12.flex-center-between.case-select(href="#") 
-					span My credit report has mistakes
-					+icon("next")
-				.text-center
-					img.main-case_logo.mx-auto.mb-md-60.mb-40(src="img/logo/logo-icon-white.svg", alt="logo")
-					.max-600.mx-auto
-						p.fs-24.c-white.mb-20 Cras justo odio, dapibus ac facilisis in, egestas  eget quam. Aenean eu leo quam.
-						p.c-white.mb-md-60.mb-40 Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
-					a.btn.max-444.mx-auto(href="#")  Continue
+				each val in ['My credit report has mistakes','My credit report states that I am deceased','I am the victim of Identity Theft','My background check has mistakes']
+					a.mb-12.flex-center-between.case-select(href="#") 
+						=val
+						+icon("next")
