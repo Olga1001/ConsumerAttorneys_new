@@ -12,7 +12,7 @@
     background: $bg-blue-navy3
     border: 1px solid rgba($white, 0.22)
     border-radius: 4px
-    padding: 20px
+    padding: 19px 20px
     display: block
     font-size: 16px
     line-height: 20px
@@ -29,6 +29,8 @@
         background-image: url("../img/common/bg2-mob.jpg")
     .main-case_container
         padding: 40px 16px
-@media only screen and (max-width : 375px)
+@media only screen and (max-width : 539px)
+    .main-case_container
+        min-height: calc(100vh - 123px - 92px)
     .main-case
-        min-height: calc(100vh - 82px)
+        min-height: calc(100vh - 92px)

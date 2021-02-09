@@ -1,0 +1,44 @@
+extends layout/main-case
+
+block variables
+	-var title = 'Case Evaluation - step 1a'
+
+block content
+	main.main.main-case
+		include modules/header/header2
+		.main-case_container.mx-auto.pt-md-80.pt-40
+			.mx-auto.w-100
+				h4.title4.text-center.c-white.pb-8.mb-md-40.mb-20 What best describes your credit report mistakes?
+				.pb-md-36.pb-16
+					- 
+						caseSelect = [
+							{
+								text: 'Some of my accounts contain inaccurate information for example:',
+								text1: 'I paid off the balance on my account, yet my credit report still shows a balance or my car account lists a repossession, but my car was never repossessed, etc.'
+							},
+							{
+								text: 'My credit report has accounts, inquiries, and/or information that I do not recognize.'
+							},
+							{
+								text: 'My credit report contains another person`s account(s), such as a family member or unrelated person.'
+							},
+							{
+								text: 'My credit report states that I am deceased'
+							},
+							{
+								text: 'I am the victim of Identity Theft'
+							}
+						]
+					each val in caseSelect
+						if (val.text1)
+							a.mb-12.justify-content-between.case-select(href="#") 
+								span=val.text
+									span.d-block.mt-20=val.text1 
+								+icon("next","ml-16")
+						else
+							a.mb-12.justify-content-between.case-select(href="#") 
+								=val.text
+								+icon("next","ml-16")
+				a.btn.btn4.w-100.lh-38(type="#")
+					+icon("arrow-left","mr-12") 
+					| Previous step

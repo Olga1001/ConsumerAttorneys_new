@@ -1,0 +1,20 @@
+extends layout/main-case
+
+block variables
+	-var title = 'Case Evaluation - step 5'
+
+block content
+	main.main.main-case
+		include modules/header/header2
+		.align-items-center.main-case_container.mx-auto.pt-40
+			.mx-auto.w-100
+				h4.title4.text-center.c-white.pb-8.mb-md-40.mb-20 HHave you applied for – and were you denied – a loan or financing after the date of the inaccurate reporting?
+				
+				.pb-md-36.pb-16
+					each val in ['Yes I applied for a loan/financing and was denied','Yes I applied for a loan/financing and was approved', 'No, I have not applied for additional credit']
+						a.mb-12.justify-content-between.case-select(href="#") 
+							=val
+							+icon("next","ml-16")
+				a.btn.btn4.w-100.lh-38(type="#")
+					+icon("arrow-left","mr-12") 
+					| Previous step
