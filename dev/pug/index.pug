@@ -1,11 +1,36 @@
 extends layout/main-case
 
 block variables
-	-var title = 'Contact details'
+	-var title = 'Case Evaluation - step 6'
 
 block content
 	main.main.main-case
 		include modules/header/header2
 		.align-items-center.main-case_container.mx-auto.pt-40
-			.mx-auto.w-100
+			form.w-100
+				h4.fs-24.c-white.mb-md-30.mb-20 Contact details
+				p.mb-12 
+					label.form-label Full Name
+					input(type="text" value="John Smith" requared)
+				p.mb-12 
+					label.form-label Email
+					input(type="email" value="john.smith@mail.com" requared)
+				p.mb-12 
+					label.form-label Phone Number
+					input(type="number" value="4523313423" requared)
+				p.mb-12 
+					label.form-label Additional information
+					textarea(name="", cols="20", rows="4" placeholder="Start typing here...") 
+				label.align-items-center.py-12
+					input.checkbox(type="checkbox")
+					span.check 
+					span.c-white.fs-14 I have read and agree to the  
+						a.c-green.d-inline(href="#")   Privacy Policy
+
+				.flex-wrap.justify-content-between
+					.message.align-items-center.mt-24
+						.message-icon 
+							+icon("shield-lock")
+						p.fs-12.c-white We keep your information completely confidential and will not send you spam or sell your information.
+					button.btn.mt-24(type="submit") Send Message
 				

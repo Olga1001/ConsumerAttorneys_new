@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Contact details</title><!--[if IE]>
+    <title>Case Evaluation - step 6</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=375,initial-scale=1">
     <meta name="keywords" content="">
@@ -40,7 +40,39 @@
             </div>
           </header>
           <div class="align-items-center main-case_container mx-auto pt-40">
-            <div class="mx-auto w-100"></div>
+            <form class="w-100">
+              <h4 class="fs-24 c-white mb-md-30 mb-20">Contact details</h4>
+              <p class="mb-12"> 
+                <label class="form-label">Full Name</label>
+                <input type="text" value="John Smith" requared>
+              </p>
+              <p class="mb-12"> 
+                <label class="form-label">Email</label>
+                <input type="email" value="john.smith@mail.com" requared>
+              </p>
+              <p class="mb-12"> 
+                <label class="form-label">Phone Number</label>
+                <input type="number" value="4523313423" requared>
+              </p>
+              <p class="mb-12"> 
+                <label class="form-label">Additional information</label>
+                <textarea name="" cols="20" rows="4" placeholder="Start typing here..."> </textarea>
+              </p>
+              <label class="align-items-center py-12">
+                <input class="checkbox" type="checkbox"><span class="check"> </span><span class="c-white fs-14">I have read and agree to the  <a class="c-green d-inline" href="#">  Privacy Policy</a></span>
+              </label>
+              <div class="flex-wrap justify-content-between">
+                <div class="message align-items-center mt-24">
+                  <div class="message-icon"> 
+                    <svg class="svg-sprite-icon icon-shield-lock">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#shield-lock"></use>
+                    </svg>
+                  </div>
+                  <p class="fs-12 c-white">We keep your information completely confidential and will not send you spam or sell your information.</p>
+                </div>
+                <button class="btn mt-24" type="submit">Send Message</button>
+              </div>
+            </form>
           </div>
         </main>
       </div>

@@ -139,10 +139,19 @@ a
 p a 
   display: inline 
 
-input
+input, textarea
   width: 100%
   appearance: none
-  border: none 
+  background: $blue-navy5
+  border: 1px solid $blue
+  border-radius: 4px
+  padding: 11px 12px
+  font-family: 'OpenSans', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 22px
+  color: #FFFFFF
 
 table
   border-spacing: 0
@@ -288,6 +297,14 @@ h6, .title6
   stroke-width: 1.2px
   +box(14px,100%)
 
+.icon-shield-lock 
+  +box(15px, 100%)
+  stroke-width: 1.4px 
+  stroke: $white 
+  fill: none 
+  margin: 0 auto
+  display: block
+
 .circle2 
   border: 0.8px solid $white
   +box(19px)
@@ -374,6 +391,22 @@ h6, .title6
     fill:: none 
     stroke: $green
     +box(12px)
+
+.checkbox 
+  display: none 
+  &:checked ~ .check 
+    background-image: url("../img/common/check.svg")
+    
+
+.check 
+  border: 1.4px solid $green 
+  width: 16px 
+  height: 16px
+  background: no-repeat center / 10px
+  display: block 
+  flex-shrink: 0
+  border-radius: 2px
+  margin-right: 12px
 
 @import "modules/modules"
  
