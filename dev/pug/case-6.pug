@@ -1,0 +1,40 @@
+extends layout/main-case
+
+block variables
+	-var title = 'Case Evaluation - step 6'
+
+block content
+	main.main.main-case
+		include modules/header/header2
+		.align-items-center.main-case_container.mx-auto.pt-40
+			form.w-100
+				h4.fs-24.c-white.mb-md-30.mb-20 Contact details
+				p.mb-12.relative 
+					label.form-label Full Name
+					input.input(type="text" value="" required )
+					span.error-message error-message
+				p.mb-12.relative.error  
+					label.form-label Email
+					input.input(type="email" value="john.smith" required )
+					span.error-message error-message
+				p.mb-12.relative.disablied  
+					label.form-label(disablied) Phone Number
+					input.input(type="number" value="4523313423"  )
+					span.error-message error-message
+				p.mb-12.relative 
+					label.form-label Additional information
+					textarea.textarea(cols="20", rows="4" placeholder="Start typing here...")
+					span.error-message error-message
+				label.align-items-center.py-12
+					input.checkbox(type="checkbox")
+					span.check 
+					span.c-white.fs-14 I have read and agree to the  
+						a.c-green.d-inline(href="#")   Privacy Policy
+
+				.flex-wrap.justify-content-between
+					.message.align-items-center.mt-24
+						.message-icon 
+							+icon("shield-lock")
+						p.fs-12.c-white We keep your information completely confidential and will not send you spam or sell your information.
+					button.btn.mt-24(type="submit") Send Message
+				

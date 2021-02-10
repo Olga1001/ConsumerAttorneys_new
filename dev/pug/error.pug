@@ -1,0 +1,18 @@
+extends layout/main
+
+block variables
+	-var title = '404'
+
+block content
+	main.main.main-error
+		section.main-error_section
+			.container
+				img.mx-auto(src="img/common/error.svg", alt="error")
+				.text-center
+					h4.fs-24.c-white.mb-12.pt-30 Page Not Found
+					p.c-white We can’t seem to find the page you’re looking for.
+				a.btn.w-fit-content.mx-auto.mt-40(href="#") Back to Homepage
+
+	
+
+

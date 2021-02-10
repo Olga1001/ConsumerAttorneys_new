@@ -1,7 +1,20 @@
+.nav-breadcrumbs
+  background: $bg-white 
 .breadcrumbs 
+  padding: 20px 0
+  +d-flex(flex-start,center)
   &__item
+    +d-flex(center)
+    font-size: 14px
+    line-height: 20px
+    svg 
+      width: 10px
+      stroke-width: 1.4px
   &__link
+    display: block
+    color: $brown
   &__text 
+    color: $black
 
 @media only screen and (max-width : 991px)
   // 

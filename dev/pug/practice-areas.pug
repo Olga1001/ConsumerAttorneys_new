@@ -1,0 +1,37 @@
+extends layout/main
+
+block variables
+	-var title = 'Our Practice Areas'
+
+block content
+	main.main.main-practice-areas
+		section.first2-section
+			.container
+				h1.title2.text-center Our Practice Areas
+		section.practice-areas_second-section
+			.container
+				.text-center
+					h4.fs-24.mb-28 Cras justo odio, dapibus ac facilisis in, egestas eget quam. <br class="d-lg-block d-none"> Aenean eu leo quam. Pellentesque ornare sem.
+					p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus <br class="d-lg-block d-none"> sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.
+				.flex-wrap.practice-areas_cards 
+					each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
+						.practice-areas_card
+							.align-items-center.lh-20
+								.circle
+									+icon(val.icon)
+								=val.title
+							.practice-areas_card-dropdown
+								p.fs-14.c-brown-100.ff-opensans.line-clamp Etiam porta sem malesuada magna molli euismod. Integer posuere erat a ante.
+								a.ml-auto.flex-center-end.mt-20(href="#") 
+									span.mr-12.c-green Explore
+									+icon("arrow-right")
+							
+
+		section.sixth-section
+			.container
+				include layout/testimonial
+				include layout/news
+
+
+
+

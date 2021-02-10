@@ -1,36 +1,81 @@
-extends layout/main-case
+extends layout/main
 
 block variables
-	-var title = 'Case Evaluation - step 6'
+	-var title = 'Practice Areas - Credit Reporting Errors'
 
 block content
-	main.main.main-case
-		include modules/header/header2
-		.align-items-center.main-case_container.mx-auto.pt-40
-			form.w-100
-				h4.fs-24.c-white.mb-md-30.mb-20 Contact details
-				p.mb-12 
-					label.form-label Full Name
-					input(type="text" value="John Smith" requared)
-				p.mb-12 
-					label.form-label Email
-					input(type="email" value="john.smith@mail.com" requared)
-				p.mb-12 
-					label.form-label Phone Number
-					input(type="number" value="4523313423" requared)
-				p.mb-12 
-					label.form-label Additional information
-					textarea(name="", cols="20", rows="4" placeholder="Start typing here...") 
-				label.align-items-center.py-12
-					input.checkbox(type="checkbox")
-					span.check 
-					span.c-white.fs-14 I have read and agree to the  
-						a.c-green.d-inline(href="#")   Privacy Policy
+	main.main.main-credit-reporting
+		section.first2-section
+			.container
+				h1.title2.text-center Credit Reporting Errors
+		nav.nav-breadcrumbs
+			.container
+				ul.breadcrumbs
+					+breadcrumbs-item('Home','#')
+					+breadcrumbs-item('Practice Areas','#')
+					+breadcrumbs-item('Credit Reporting Errors')
+		section.second2-section
+			.container
+				.flex-wrap.justify-content-between 
+					.col-left
+						.block-video
+							.flex-center-center.z-2.relative
+								button.btn-play(type="button")
+									span.btn-play-border
+									+icon("play")
+								div 
+									p.fs-12.text-up.c-green watch now
+									p.fs-24.c-white Play video
+						form.form-contact 
+							h6.title6.left.mb-24
+								span.c-green.bg-white Contact Us
+							.flex-wrap.mb-md-40.mb-28
+								.align-items-center.pt-12.mr-28
+									.circle.mr-12 
+										+icon("phone","c-dark")
+									p (+1) 800 604 0466
+								.align-items-center.pt-12
+									.circle.mr-12 
+										+icon("mail","c-dark")
+									p info@consumerattorneys.com
+							.flex-wrap.align-items-end 
+								.w-sm-50
+									p.relative.mb-12 
+										label.fs-12.c-gray.mb-4 Full Name
+										input(type="text" value="John Smith" required) 
+										span.error-message error-message
+								.w-sm-50
+									p.relative.mb-12.disablied 
+										label.fs-12.c-gray.mb-4 Phone Number
+										input(type="number" value="4523313423" required) 
+										span.error-message error-message
+								.w-sm-50
+									p.relative.mb-sm-12.mb-28.error 
+										label.fs-12.c-gray.mb-4 Email
+										input(type="email" value="john.smith" required) 
+										span.error-message error-message
+								.w-sm-50
+									p.relative.mb-sm-12 
+										span.select
+											input(type="email" placeholder="Subject" required) 
+										span.error-message error-message
+								.w-100.mb-16
+									.mb-28
+									p.relative.mb-12 
+										textarea(cols="20", rows="4" placeholder="Start typing here...")
+										span.error-message error-message
+							button.btn.ml-auto.d-block(type="submit") Send Message
 
-				.flex-wrap.justify-content-between
-					.message.align-items-center.mt-24
-						.message-icon 
-							+icon("shield-lock")
-						p.fs-12.c-white We keep your information completely confidential and will not send you spam or sell your information.
-					button.btn.mt-24(type="submit") Send Message
-				
+
+
+					.col-right
+						h6.title6.left.mb-24
+							span.align-items-center
+								.circle.bg-green 
+									+icon("credit","c-white")
+
+						p.fs-24.mb-sm-40.mb-28 Credit reports are a necessary evil for consumers to access loans and mortgages, but errors contained within -- be they the result of identity theft or just poor record keeping by creditors -- can block them from getting capital or force them to pay more for higher interest rates.
+						p.text.mb-28 The Federal Trade Commission found in a 2013 study that 21 percent of consumers’ credit reports contained inaccurate information, 13 percent had mistakes that affected their credit scores -- and that 5 percent had such glaring problems that they caused loan applications to be denied.
+						p.text.mb-28 Fortunately for consumers, they are protected by law when inaccurate information ends up in their credit reports. Under the federal Fair Credit Reporting Act (FCRA), consumer reporting agencies and the companies that provide them with consumers’ data are required to convey accurate information and fix errors once after they have been disputed.
+						p.text.mb-28 Consumers should check their credit reports from time to time to search for any irregularities and let reporting agencies know as soon as possible if things are amiss. But according to the National Consumer Law Center, consumers simply disputing inaccurate information in their credit reports might not be enough to clear their records.
+						p.text.mb-28 With help from attorneys from Cohen & Mizrahi, consumers may be able to fix errors in their credit reports in a timely manner and potentially obtain compensation for damages caused by the mistakes.

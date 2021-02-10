@@ -1,0 +1,15 @@
+extends layout/main-case
+
+block variables
+	-var title = 'Case Evaluation - step 7'
+
+block content
+	main.main.main-case
+		include modules/header/header2
+		.align-items-center.main-case_container.mx-auto
+			.text-center.mx-auto
+				img.main-case_logo.mx-auto.mb-md-60.mb-40(src="img/logo/logo-icon-white.svg", alt="logo")
+				.max-600.mx-auto
+					p.fs-24.c-white.mb-20 Thanks, we have successfully <br class="d-sm-block d-none"> received your enquiry!
+					p.c-white.mb-md-60.mb-40 A legal team member will review and get back to you about <br class="d-sm-block d-none"> scheduling a call to discuss the best way forward. 
+				a.btn.max-444.mx-auto(href="#") Back to Homepage

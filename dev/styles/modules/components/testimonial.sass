@@ -2,33 +2,34 @@
 .testimonial 
     background: $bg-white
     box-shadow: $shadow2
-    border-radius: 4px    
-    margin-top: -150px
-    margin-bottom: 100px
+    border-radius: 4px   
+    transform: translateY(-150px)
     padding: 74px 119px 60px
     position: relative
     z-index: 2
+    margin-bottom: -50px
  
 .user-review 
     width: 360px
 
-.text-review 
+.text-review  
     width:  calc(100% - 360px)
 
 @media only screen and (max-width : 1199px)
     .testimonial
         padding: 30px 40px
-        margin-top: -115px
+        transform: translateY(-115px)
+        margin-bottom: -75px
 
 @media only screen and (max-width : 991px)
     .testimonial
-        margin-top: -150px
+        transform: translateY(-150px)
+        margin-bottom: -110px
     .user-review, .text-review
         width: 100%
 
 @media only screen and (max-width : 575px)
     .testimonial 
         padding: 16px 16px 24px 16px
-        margin-bottom: 43px
         .btn
             width: 100%

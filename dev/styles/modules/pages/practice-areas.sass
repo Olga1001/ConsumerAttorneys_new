@@ -1,0 +1,89 @@
+.practice-areas
+    &_second-section
+        background: $gradient3
+        padding: 100px 0 195px
+    &_cards 
+        padding-top: 100px
+    &_card
+        padding: 28px
+        margin-right: 28px
+        border-radius: 4px
+        margin-bottom: 28px
+        position: relative
+        z-index: 1
+        &:before 
+            content: ''
+            position: absolute
+            top: 0 
+            left: 0
+            background: #FAFAFF
+            width: 100% 
+            height: 100%
+            z-index: -1
+            transition: all 0.3s ease
+            border: 1px solid transparent
+
+        &-dropdown
+            position: absolute 
+            top: 100% 
+            left: 0
+            width: 100% 
+            z-index: 2
+            opacity: 0
+            pointer-events: none
+            // background: #FAFAFF
+            padding: 0 29px 24px
+            transition: all 0.3s ease
+            p 
+        .circle 
+            +box(60px)
+            margin-right: 16px
+            svg 
+                width: 26px
+        &:hover 
+            z-index: 3
+            &:before 
+                background: $bg-white
+                border-color: $gray-100
+                box-shadow: $shadow4
+                height: calc(100% + 116px)
+                transform: scale(1.04)
+            .practice-areas_card-dropdown
+                opacity: 1
+                pointer-events: auto
+                border-radius: 4px
+                
+@media only screen and (min-width: 1200px)
+    .practice-areas_card
+        width: calc(25% - 21px)
+        &:nth-child(4n+4)
+            margin-right: 0
+
+@media (min-width: 992px) and (max-width: 1199px)
+    .practice-areas_card
+        width: calc(33.33% - 19px)
+        &:nth-child(3n+3)
+            margin-right: 0
+
+@media (min-width: 768px) and (max-width: 991px)
+    .practice-areas_card
+        width: calc(50% - 14px)
+        &:nth-child(2n+2)
+            margin-right: 0
+
+@media only screen and (max-width: 767px)
+    .practice-areas_card
+        width: 100%
+        margin-right: 0
+        margin-bottom: 16px
+    .practice-areas_second-section
+        padding-top: 50px 
+        padding-bottom: 185px
+    .practice-areas_cards
+        padding-top: 40px
+    .practice-areas_second-section
+        .fs-24
+            font-size: 20px 
+            line-height: 32px
+
+                    

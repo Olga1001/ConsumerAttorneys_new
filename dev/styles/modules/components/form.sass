@@ -19,3 +19,84 @@
         border: 1px solid $green5
         margin-right: 8px
         flex-shrink: 0
+
+.error-message
+    position: absolute 
+    top: calc(100% + 4px)
+    right: 0
+    font-size: 12px
+    line-height: 16px
+    text-align: right
+    color: $red
+    display: none
+
+input.input, textarea.textarea
+    background: $blue-navy5
+    border: 1px solid $blue
+    color:  $white
+    &:hover 
+        border-color: $blue2
+    &:focus 
+        border-color: $green4
+        color: $white
+    &::-webkit-input-placeholder
+        color: $white
+        opacity: 0.3
+    &:-moz-placeholder
+        color: $white
+        opacity: 0.3
+    &::-moz-placeholder
+        color: $white
+        opacity: 0.3
+    &:-ms-input-placeholder
+        color: $white
+        opacity: 0.3
+
+.disablied
+    pointer-events: none
+    label
+        color: $gray
+        opacity: 1
+    input, textarea     
+        background: $bg-gray-100-1
+        border-color: $gray-100
+        color: $gray-300
+    label.form-label
+        color: $gray-500
+    input.input, textarea.textarea 
+        background: $gray-700
+        border-color: $gray-400
+        color: $gray-500
+
+.error
+  input, textarea 
+    color: $red
+    border-color: $red
+  .error-message
+    display: block
+
+.form-contact
+    background: $bg-white url("../img/common/shield2.png") no-repeat left bottom / 296px 215px
+    box-shadow: $shadow2
+    border-radius: 0px 0px 4px 4px
+    padding: 40px 28px
+    .circle 
+        +box(44px)
+
+@media only screen and (min-width : 576px)
+    .form-contact
+        .w-sm-50 
+            &:nth-child(even)
+                padding-left: 10px
+            &:nth-child(odd)
+                padding-right: 10px         
+
+@media only screen and (max-width : 575px)  
+    .message-icon 
+        +box(52px)
+        svg 
+            width: 21px
+    .message
+        width: 100%
+    form .btn 
+        width: 100%
