@@ -97,25 +97,10 @@ block content
 						p.fs-24 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem.
 					.w-lg-50.mb-28.pl-lg-20 
 						p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam.
-				.slider2
-					.d-flex.hidden-xy
-						each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
-							a.align-items-center.slide-areas(href="#") 
-								.circle
-									+icon(val.icon)
-								=val.title
-				.flex-center-between.pt-md-0.pt-sm-30.pt-20
-					button.prev.slider-btn2(type="button")
-						+icon("prev", "c-green")
-					ul.dots.mx-auto
-						li.active 
-							button.bg-gray-100(type="button")
-						li 
-							button.bg-gray-100(type="button")
-						li 
-							button.bg-gray-100(type="button")
-					button.next.slider-btn2(type="button")
-						+icon("next", "c-green")
+				
+				include layout/slider2
+
+				
 		section.fifth-section
 			img.img-union.d-lg-block.d-none(src="img/common/union.svg", alt="union")
 			.container.relative 

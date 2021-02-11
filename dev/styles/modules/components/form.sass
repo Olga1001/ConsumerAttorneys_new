@@ -70,8 +70,8 @@ input.input, textarea.textarea
 
 .error
   input, textarea 
-    color: $red
-    border-color: $red
+    color: $red!important
+    border-color: $red!important
   .error-message
     display: block
 
@@ -79,7 +79,7 @@ input.input, textarea.textarea
     background: $bg-white url("../img/common/shield2.png") no-repeat left bottom / 296px 215px
     box-shadow: $shadow2
     border-radius: 0px 0px 4px 4px
-    padding: 40px 28px
+    padding: 40px 28px 28px
     .circle 
         +box(44px)
 
@@ -100,3 +100,7 @@ input.input, textarea.textarea
         width: 100%
     form .btn 
         width: 100%
+    .form-contact 
+        padding: 30px 16px 40px 
+    .form-contact .circle
+        +box(52px)

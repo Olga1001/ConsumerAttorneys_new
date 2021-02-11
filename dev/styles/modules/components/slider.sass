@@ -44,23 +44,47 @@
     width: 329px 
     flex-shrink: 0
     padding: 28px 15px 28px 28px
-    background: $bg-white
+    background: rgba($bg-white, 0.7)
     border: 1px solid $gray-100
     box-shadow: $shadow3
     border-radius: 4px
     margin-right: 28px
     margin-bottom: 5px
     line-height: 20px
+    transition: all 0.3s ease
+    
     .circle 
         +box(60px)
         margin-right: 16px
+        transition: all 0.3s ease
         svg 
             width: 25px
+            transition: all 0.3s ease
     &:hover 
-        
+        background: rgba($bg-white, 1)
 
 .slider2 
     margin-top: 20px
+
+.slider-g
+    .slider2
+        margin-top: 0 
+    .slide-areas 
+        background: #FAFAFF
+        box-shadow: none
+        border: none
+        margin-bottom: 0
+        &:hover 
+            background-color: $bg-green 
+            color: $white
+            .circle 
+                border-color: $white
+                svg 
+                    stroke: $white
+    .dots button
+        background: $bg-gray-100
+    .dots
+        padding-top: 19px
 
 @media only screen and (max-width : 1199px)
     .slider-item

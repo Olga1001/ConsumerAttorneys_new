@@ -15,4 +15,10 @@ $(document).ready(function () {
     $(this).find(".menu-dropdown").slideUp(300);
   });
 
+  // asked dropdown
+  $(".asked-action").click(function () {
+    $(this).toggleClass('active').parents().siblings().find(".asked-action").removeClass('active');
+    $(this).siblings().slideToggle(300).parents().siblings().find(".asked-dropdown").slideUp(300);
+  });
+
 });

@@ -212,8 +212,15 @@ h6, .title6
       padding-left: 0
       &:before
         background-color: $gray-200
+  &.left2 span 
+    &:before
+      width: calc(100% - 84px)
+      left: 84px
+      transform: translateX(0)
+      background-color: $gray-200
   .circle 
     +box(60px)
+    padding: 0
     svg 
       width: 28px
   
@@ -314,6 +321,14 @@ h6, .title6
   border: 0.8px solid $white
   +box(19px)
   border-radius: 50%
+
+.circle3
+  +box(52px)
+  border-radius: 50%
+  svg 
+    +box(28px,100%)
+    margin: 0 auto
+    display: block
 
 .avatar 
   +box(91px)

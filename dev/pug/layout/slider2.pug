@@ -1,0 +1,20 @@
+.w-100(class=sliderG==true ? 'slider-g':'')
+    .slider2
+        .d-flex.hidden-xy
+            each val in [{icon: 'credit', title: 'Credit Reporting Errors'},{icon: 'checkerrow', title: 'Background Check Errors'},{icon: 'identity', title: 'Identity Theft'},{icon: 'debt', title: 'Debt Collection Harassment and Abuse'},{icon: 'telemarketer', title: 'Telemarketer Harassment'},{icon: 'bankruptcy', title: 'Bankruptcy'},{icon: 'consumer', title: 'Consumer Finance Litigation'},{icon: 'class', title: 'Class Actions'},{icon: 'injury', title: 'Personal Injury'},{icon: 'disabilities', title: 'Americans with Disabilities Act'}]
+                a.align-items-center.slide-areas(href="#") 
+                    .circle
+                        +icon(val.icon)
+                    =val.title
+    .flex-center-between.pt-md-0.pt-sm-30.pt-20
+        button.prev.slider-btn2(type="button")
+            +icon("prev", "c-green")
+        ul.dots.mx-auto
+            li.active 
+                button.bg-gray-100(type="button")
+            li 
+                button.bg-gray-100(type="button")
+            li 
+                button.bg-gray-100(type="button")
+        button.next.slider-btn2(type="button")
+            +icon("next", "c-green")

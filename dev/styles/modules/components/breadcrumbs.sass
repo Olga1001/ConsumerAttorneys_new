@@ -5,22 +5,48 @@
   +d-flex(flex-start,center)
   &__item
     +d-flex(center)
-    font-size: 14px
-    line-height: 20px
     svg 
       width: 10px
       stroke-width: 1.4px
+      margin-right: 10px
   &__link
     display: block
     color: $brown
+    margin-right: 10px
+    min-width: 11px
+    position: relative
+    font-size: 14px
+    line-height: 20px
+    min-height: 20px
   &__text 
     color: $black
+    font-size: 14px
+    line-height: 20px
 
-@media only screen and (max-width : 991px)
-  // 
-@media only screen and (max-width : 767px)
-  // 
 @media only screen and (max-width : 575px)
-  // 
-@media only screen and (max-width : 420px)
-  // 
+  .breadcrumbs__item 
+    display: none
+    .breadcrumbs__link span 
+      display: none
+    &:first-child, &:last-child
+      display: flex
+      .breadcrumbs__link 
+        span
+          display: block
+        &:before 
+          content: none
+    &:nth-child(2)
+      display: flex
+      .breadcrumbs__link 
+        &:before 
+          content: '...'
+          position: absolute 
+          left: 0 
+          bottom: 0
+          font-size: 14px
+          line-height: 20px
+          font-family: "Sora", sans-serif
+          font-style: normal
+          font-weight: normal
+          color: $black
+      

@@ -9,7 +9,8 @@ mixin icon(name,mod)
 mixin breadcrumbs-item(text,href)
 	li.breadcrumbs__item
 		if(href)
-			a.breadcrumbs__link(href=href)=text
-			+icon("arrow-right","mx-10")
+			a.breadcrumbs__link(href=href)
+				span=text
+			+icon("arrow-right","ml-auto")
 		else
 			span.breadcrumbs__text=text

@@ -3,10 +3,27 @@
 .second2-section
     background: $gradient3
     padding: 80px 0
+    border-bottom: 1px solid $gray-100
     .col-left 
         width: 614px
     .col-right 
         max-width: 686px
+        width: calc(100% - 642px)
+
+.third2-section
+    padding: 100px 0 77px
+    background-color: $bg-gray
+    border-bottom: 1px solid $gray-100
+    .col-left 
+        width: calc(100% - 353px)
+        max-width:  966px
+    .col-right 
+        width: 329px
+
+.fourth2-section
+    background-color: $bg-white
+    padding: 80px 0 24px
+
 
 .block-video
     border-radius: 4px 4px 0px 0px
@@ -26,3 +43,55 @@
         background: $black
         opacity: 0.4
 
+.asked-section 
+    background: $bg-blue-navy
+    padding: 53px 0 80px
+
+.asked
+    &-list
+        width: calc(100% - 370px)
+        max-width: 991px
+        li 
+            border-bottom: 1px solid rgba($white,0.1)
+    &-action
+        padding: 25px 0
+        cursor: pointer
+        .icon-arrow-down 
+            +box(14px)
+        &.active 
+            .icon-arrow-down  
+                transform: scaleY(-1)
+
+    &-dropdown 
+        padding-bottom: 25px
+        display: none
+
+@media only screen and (max-width : 1199px)
+    .second2-section .col-left
+        width: 100%
+        margin-bottom: 28px
+    .second2-section .col-right
+        width: 100% 
+        max-width: 100%
+@media only screen and (max-width : 991px)
+    .third2-section .col-left
+        max-width: 100% 
+        width: 100%
+        margin-bottom: 26px
+    .third2-section .col-right, .asked-list
+        width: 100%
+    
+@media only screen and (max-width : 767px)
+    .second2-section 
+        padding: 0
+    .asked-section
+        padding: 40px 0 50px
+    .third2-section
+        padding: 40px 0 30px
+
+@media only screen and (max-width : 575px)
+    .second2-section .col-left
+        margin: 0 -16px
+        width: calc(100% + 32px)
+    .block-video 
+        height: 232px 

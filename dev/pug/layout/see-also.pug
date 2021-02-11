@@ -1,0 +1,11 @@
+.see-also.mb-28 
+    .flex-center-between.mb-16 
+        p.fs-24 See also
+        .bg-green.circle3 
+            +icon("credit","c-white")
+    ul.see-also_list 
+        each val in ['Mixed Credit Reports','Identity Theft','Bankruptcy Reporting Errors']
+            li
+                a.flex-center-between(href="#") 
+                    spna.fs-14.c-green=val
+                    +icon("arrow-right","c-black")
