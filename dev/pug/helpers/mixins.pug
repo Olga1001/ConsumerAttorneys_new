@@ -14,3 +14,18 @@ mixin breadcrumbs-item(text,href)
 			+icon("arrow-right","ml-auto")
 		else
 			span.breadcrumbs__text=text
+
+mixin cardArticle(title,text,img,date)
+	.card-articles 
+		a(href="#")
+			img(src="img/common/"+ img, alt="image")
+		.card-articles_content 
+			.flex-center-between.mb-16 
+				.align-items-center 
+					+icon("calendar","mr-12")
+					p.fs-12.c-gray-200= date
+				hr.line-basis.mx-12 
+				a.slider-btn.ml-auto(href="#")
+					+icon("arrow-right")
+			a.fs-24.mb-20(href="#")= title
+			p.text.fs-14= text

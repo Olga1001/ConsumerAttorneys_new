@@ -1,0 +1,135 @@
+extends layout/main
+
+block variables
+	-var title = 'Practice Areas - Credit Reporting Errors'
+	-var sliderG = true
+
+block content
+	main.main.main-credit-reporting
+		section.first2-section
+			.container
+				h1.title2.text-center Credit Reporting Errors
+		nav.nav-breadcrumbs
+			.container
+				ul.breadcrumbs
+					+breadcrumbs-item('Home','#')
+					+breadcrumbs-item('Practice Areas','#')
+					+breadcrumbs-item('Credit Reporting Errors')
+		section.second2-section
+			.container
+				.flex-wrap.justify-content-between 
+					.col-left
+						.block-video
+							.flex-center-center.z-2.relative
+								button.btn-play(type="button")
+									span.btn-play-border
+									+icon("play")
+								div 
+									p.fs-12.text-up.c-green watch now
+									p.fs-24.c-white Play video
+						form.form-contact 
+							h6.title6.left.mb-20
+								span.c-green.bg-white Contact Us
+							.flex-wrap.mb-md-30.mb-20
+								.align-items-center.pt-12.mr-28
+									.circle.mr-12 
+										+icon("phone","c-dark")
+									p.fs-sm-16.fs-14 (+1) 800 604 0466
+								.align-items-center.pt-12
+									.circle.mr-12 
+										+icon("mail","c-dark")
+									p.fs-sm-16.fs-14 info@consumerattorneys.com
+							.flex-wrap.align-items-end 
+								.w-sm-50.w-100
+									p.relative.mb-12 
+										label.fs-12.c-gray.mb-4 Full Name
+										input(type="text" value="John Smith" required) 
+										span.error-message error-message
+								.w-sm-50.w-100
+									p.relative.mb-12.disablied 
+										label.fs-12.c-gray.mb-4 Phone Number
+										input(type="number" value="4523313423" required) 
+										span.error-message error-message
+								.w-sm-50.w-100
+									p.relative.mb-sm-12.mb-28.error 
+										label.fs-12.c-gray.mb-4 Email
+										input(type="email" value="john.smith" required) 
+										span.error-message error-message
+								.w-sm-50.w-100
+									p.relative.mb-sm-12 
+										span.select
+											input(type="email" placeholder="Subject" required) 
+										span.error-message error-message
+								.w-100.mb-16
+									.mb-28
+									p.relative.mb-12 
+										textarea(cols="20", rows="4" placeholder="Start typing here...")
+										span.error-message error-message
+							button.btn.ml-auto.d-block(type="submit") Send Message
+
+					.col-right
+						h6.title6.left2.mb-40
+							span.circle.bg-green 
+								+icon("credit","c-white")
+
+						p.fs-24.mb-sm-48.mb-28 Credit reports are a necessary evil for consumers to access loans and mortgages, but errors contained within -- be they the result of identity theft or just poor record keeping by creditors -- can block them from getting capital or force them to pay more for higher interest rates.
+						p.text.mb-28 The Federal Trade Commission found in a 2013 study that 21 percent of consumers’ credit reports contained inaccurate information, 13 percent had mistakes that affected their credit scores -- and that 5 percent had such glaring problems that they caused loan applications to be denied.
+						p.text.mb-28 Fortunately for consumers, they are protected by law when inaccurate information ends up in their credit reports. Under the federal Fair Credit Reporting Act (FCRA), consumer reporting agencies and the companies that provide them with consumers’ data are required to convey accurate information and fix errors once after they have been disputed.
+						p.text.mb-28 Consumers should check their credit reports from time to time to search for any irregularities and let reporting agencies know as soon as possible if things are amiss. But according to the National Consumer Law Center, consumers simply disputing inaccurate information in their credit reports might not be enough to clear their records.
+						p.text.mb-28 With help from attorneys from Cohen & Mizrahi, consumers may be able to fix errors in their credit reports in a timely manner and potentially obtain compensation for damages caused by the mistakes.
+
+		section.third2-section
+			.container
+				h6.title6.left.mb-md-20.mb-10 
+					span.c-green.bg-gray Protecting Credit Is Crucial
+				h2.title2.mb-md-40.mb-28 Protecting Credit 
+					span.text-nowrap Is Crucial
+				.flex-wrap.justify-content-between  
+					.col-left.pt-12 
+						p Consumers’ credit reports contain a wide array of their personal information -- where they live, their bill-paying habits, whether or not they have filed for bankruptcy and even if they have been arrested or sued in the past. 
+						.my-md-36.my-28
+							p.text.mb-28 Inaccurate information contained in the reports may force consumers to pay more for loans and mortgages or block them from accessing lines of credit. Worse yet, bad credit reports may stand in their way of getting jobs or insurance policies.
+							p.text.mb-28 According to the Federal Trade Commission, financial advisers say that consumers should regularly check their credit reports to make sure their information is up to date and error-free.
+							p.text.mb-28 Under the FCRA, consumers may order a free credit report every 12 months. They are also entitled to a free report anytime a company turns them down for a line of credit or for employment if they believe the denial was based on erroneous information in their reports.
+						p Consumers may also obtain free credit reports if they’ve become unemployed and plan on getting a new job within 60 days, if they are depending on public assistance or if they have fallen victim to identity theft.
+						.my-md-36.my-28
+							p.text.mb-28 If a consumer takes issue with information contained in their credit reports, they should file disputes with all three major reporting agencies -- Equifax, Experian and TransUnion -- as well as any companies they believe are responsible for the mistakes.
+							p.text.mb-28 Credit reports serve the valuable purpose of reporting a consumer’s financial credit-related history to companies that...
+						.align-items-center.pt-6
+							hr.line.w-100
+							.px-20
+								a.btn.btn2.w-fit-content(href="#") Read more
+							hr.line.w-100
+					.col-right
+						include layout/see-also
+						include layout/lawyer
+
+		section.fourth2-section 
+			.container 
+				h6.title6.left.mb-md-20.mb-10 
+					span.c-green.bg-white Practice Areas
+				.flex-md-center-between.pb-md-36
+					h2.title2.mb-24 Our Practice Areas
+					a.btn.mb-md-24.mb-40(href="#") Explore more
+				include layout/slider2
+
+		section.asked-section 
+			.container 
+				.flex-wrap.justify-content-between 
+					h2.title2.c-white.pt-md-28 Frequently <br class="d-lg-block d-none"> Asked <br class="d-lg-block d-none"> Questions
+					ul.asked-list
+						li
+							.justify-content-between.asked-action.active
+								p.c-white.lh-20 How We Can Help
+								+icon("arrow-down","c-green")
+							.asked-dropdown(style="display: block")
+								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
+						li
+							.justify-content-between.asked-action
+								p.c-white.lh-20 Sed posuere consectetur est at lobortis?
+								+icon("arrow-down","c-green")
+							.asked-dropdown
+								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
+						
+
+				

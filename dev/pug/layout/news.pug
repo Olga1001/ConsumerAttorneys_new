@@ -8,34 +8,30 @@ h6.title6.left.mb-md-20.mb-10
         cardArticles = [
             {
                 title: 'What does mixed mean on credit report deletion ',
-                text: 'Sometimes a consumer’s credit report can get dragged down by dead weight.'
+                text: 'Sometimes a consumer’s credit report can get dragged down by dead weight.',
+                img: 'img.jpg',
+                date: '20.01.2021'
             },
             {
                 title: 'When an employer does a background check',
-                text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...'
+                text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...',
+                img: 'img.jpg',
+                date: '20.01.2021'
             },
             {
                 title: 'How to win a debt collection lawsuit',
-                text: 'The fair debt collection practices act prohibits which of the following practices?'
+                text: 'The fair debt collection practices act prohibits which of the following practices?',
+                img: 'img.jpg',
+                date: '20.01.2021'
             },
             {
                 title: 'How does a landlord do a background check',
-                text: 'Automated housing discrimination: what do landlord look for in background checks?'
+                text: 'Automated housing discrimination: what do landlord look for in background checks?',
+                img: 'img.jpg',
+                date: '20.01.2021'
             }
         ]
     each val, index in cardArticles
-        .card-articles(class=index>2 ? 'd-sm-block d-none':'') 
-            a(href="#")
-                img(src="img/common/img.jpg", alt="image")
-            .card-articles_content 
-                .flex-center-between.mb-16 
-                    .align-items-center 
-                        +icon("calendar","mr-12")
-                        p.fs-12.c-gray-200 27.10.2020
-                    hr.line-basis.mx-12 
-                    a.slider-btn.ml-auto(href="#")
-                        +icon("arrow-right")
-                a.fs-24.mb-20(href="#")=val.title
-                p.text.fs-14=val.text
+        +cardArticle(val.title,val.text,val.img,val.date)
 
 a.btn.btn3.d-sm-none.mt-28(href="#") View all news

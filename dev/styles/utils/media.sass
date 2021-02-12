@@ -53,6 +53,8 @@
         display: block
     .d-md-none
         display: none
+    .pb-md-24
+        padding-bottom: 24px
     .pb-md-36
         padding-bottom: 36px
     .mb-md-60
@@ -73,6 +75,8 @@
         padding-top: 28px
     .pt-md-80
         padding-top: 80px
+    .pt-md-100
+        padding-top: 100px
     .mt-md-40
         margin-top: 40px
     .mt-md-80
@@ -150,17 +154,20 @@
         line-height: 44px
     
     .table
-        margin: 0 -16px 40px
+        margin-left: -16px 
+        margin-right: -16px 
+        margin-bottom: 40px
         width: calc(100% + 32px)
+        border: none
         td, th 
-            padding: 20px 0
+            padding: 20px 16px
             &:before 
-                width: 100%
+                width: calc(100% - 32px)
         td 
             display: block
             padding-top: 24px
-            padding-left: 0 
-            padding-right: 0
+            padding-left: 16px
+            padding-right: 16px
 
             &:first-child
                 padding-bottom: 0

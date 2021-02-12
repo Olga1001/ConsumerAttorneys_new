@@ -24,7 +24,6 @@
     background-color: $bg-white
     padding: 80px 0 24px
 
-
 .block-video
     border-radius: 4px 4px 0px 0px
     position: relative 
@@ -57,7 +56,7 @@
         padding: 25px 0
         cursor: pointer
         .icon-arrow-down 
-            +box(14px)
+            +box(14px,20px)
         &.active 
             .icon-arrow-down  
                 transform: scaleY(-1)
@@ -80,7 +79,10 @@
         margin-bottom: 26px
     .third2-section .col-right, .asked-list
         width: 100%
-    
+    .asked-action:first-child 
+        border-top: 1px solid rgba($white,0.1)
+    .asked-list 
+        margin-top: 40px
 @media only screen and (max-width : 767px)
     .second2-section 
         padding: 0
@@ -88,10 +90,12 @@
         padding: 40px 0 50px
     .third2-section
         padding: 40px 0 30px
+    .fourth2-section
+        padding: 30px 0 
 
 @media only screen and (max-width : 575px)
     .second2-section .col-left
-        margin: 0 -16px
+        margin: 0 -16px 28px
         width: calc(100% + 32px)
     .block-video 
         height: 232px 
