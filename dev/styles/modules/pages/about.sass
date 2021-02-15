@@ -1,0 +1,101 @@
+.main-about
+    .first2-section 
+        background-image: url("../img/common/us.jpg")
+        min-height: 520px
+        padding-bottom: 25px
+        .title2 
+            position: relative 
+            white-space: nowrap
+        .fs-24 
+            max-width: 425px
+        .text 
+            max-width: calc(100% - 425px)
+            padding-left: 50px
+    .second2-section
+        padding: 99px 0
+    .third2-section
+        padding-bottom: 240px
+        .img-shield3 
+            left: auto 
+            right: 60px
+            bottom: -30px
+    .fourth2-section
+        padding: 100px 0 40px
+    .sixth-section
+        .testimonial
+            margin-bottom: -70px
+
+.img-shield3
+    position: absolute 
+    bottom: 0
+    left: -60px
+    +box(304px,260px)
+    z-index: -1
+
+.block-text
+    margin-right: -105px
+    z-index: 3
+    position: relative
+    background: $bg-white
+    box-shadow: $shadow2
+    border-radius: 4px
+    padding: 60px
+@media only screen and (min-width : 1200px)
+    .main-about .first2-section .container 
+        max-width: 1195px
+@media only screen and (max-width : 1199px)
+    .img-office
+        width: 100%
+        margin-bottom: -32px
+    .block-text 
+        width: calc(100% - 32px)
+        margin: 0 auto
+        hr.vertical
+@media only screen and (max-width : 991px)
+    .main-about .first2-section .fs-24
+        max-width: 100%
+        margin-bottom: 28px
+    .main-about .first2-section .text
+        max-width: 100% 
+        padding-left: 0
+    .second2-section .col-left img 
+        width: 100% 
+
+@media only screen and (max-width : 767px)
+    .block-text 
+        padding: 32px 16px
+    .main-about .first2-section
+        background-image: url("../img/common/us-mob.jpg")
+        padding-bottom: 0
+        min-height: 708px
+    .main-about .second2-section
+        padding: 0 0 40px
+    .main-about .second2-section
+        .col-left
+            width: calc(100% + 32px)
+            margin-left: -16px
+            margin-right: -16px
+    .main-about .fourth2-section 
+        padding-top: 30px
+@media only screen and (max-width : 575px)
+    .main-about 
+        .third2-section
+            padding-bottom: 160px
+        .sixth-section .btn
+            max-width: 100%
+    .block-text 
+        width: 100%
+    .img-office 
+        width: calc(100% + 32px)
+        margin-right: -16px 
+        margin-left: -16px
+    .sixth-section
+        padding-bottom: 40px
+    .main-about 
+        .sixth-section .testimonial
+            margin-bottom: -110px
+        .fourth2-section
+            .fs-24 
+                font-size: 20px 
+                line-height: 32px
+    

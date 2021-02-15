@@ -1,0 +1,79 @@
+extends layout/main
+
+block variables
+	-var title = 'About Us'
+	-var sliderG = true
+
+block content
+	main.main.main-about
+		section.first2-section
+			.container
+				.align-items-end.mb-md-50.mb-24
+					h1.title2.mr-28 About Us 
+					hr.line-green
+				.d-lg-flex
+					p.fs-24.c-white Our team of experienced attorneys are dedicated to helping our clients understand and navigate every step of the case. 
+					p.text.c-white We have earned the respect and praise of judges, the lawyers we face in the courtroom and, most importantly, our clients by caring about their issues and coming up with innovative solutions to their consumer finance issues. By paying close attention to our client’s goals and expectations, and by putting in the resources necessary to contend with our adversaries, we are able to closely identify legal claims that other law firms might overlook, which in turn maximizes our client’s overall recovery.
+
+		section.second2-section
+			.container
+				.flex-wrap.justify-content-between 
+					.col-left.relative.z-2.pt-md-12
+						img.mx-auto(src="img/common/image4.jpg", alt="image")
+						img.img-shield3(src="img/common/shield3.png", alt="shield")
+
+					.col-right
+						h2.fs-48.fw-semi.mb-md-48.mb-28 Experience. <br> Dedication. <br> Care.
+
+						p.fs-24.mb-28 These are just a few of the adjectives to describe the standards that have built Consumer Attorneys LLP into one of the top consumer protection law firms in New York City.
+						p.text.mb-md-48.mb-28 We help our clients bring lawsuits to clean up their credit reports, challenge misleading debt collection letters, come up with powerful solutions to their consumer finance problems. We specialize in uncovering mixed files, assisting victims of identity fraud, and clearing inaccuracies in credit reports so that our clients who were otherwise denied credit in the past can get approved for things such as employment, mortgages, and credit cards.
+						a.btn.w-sm-fit-content(href="#") Free Case Review
+		section.third2-section
+			.container
+				.flex-wrap.justify-content-between.pb-sm-20
+					.w-xl-50
+						h6.title6.left.mb-md-20.mb-10.max-535.mr-xl-16
+							span.c-green.bg-gray Where we practice
+						h2.title2.mb-md-60.mb-28 Offices and location
+						.d-xl-none.img-office
+							img(src="img/common/image7.jpg", alt="image")
+
+						.block-text
+							p.fs-24.mb-md-40.mb-28 While the Firm is based locally in Brooklyn Heights, we represent the interests of consumers nationwide in both state and federal courts. 
+							p.text.mb-md-40.mb-28 Our attorneys have recovered millions of dollars from large companies through careful deliberation and a deep understanding of the problems our clients face by the hands of unscrupulous debt collectors and inaccurate credit reporting. 
+							p.text While no case is too small for us to consider, we are also able to stand toe-to-toe fighting well-funded corporations in larger class action litigation. The Firm has single-handedly opened the internet to people suffering from visual impairments by ensuring that hundreds of companies nationwide update their websites to increase accessibility to the blind.
+						
+					.w-xl-50.relative.z-2.d-xl-block.d-none
+						img.ml-auto(src="img/common/image7.jpg", alt="image")
+						img.img-shield3(src="img/common/shield3.png", alt="shield")
+
+				include layout/map
+		
+		section.sixth-section
+			.container
+				include layout/testimonial
+				.flex-xl-center-between
+					.align-xl-items-center
+						.align-items-center
+							.circle3.b-green.b-1.mr-sm-20.mr-16 
+								+icon("question", "c-green")
+							p.fs-sm-40.fs-32.c-white.fw-semi Why choose us?
+						hr.vertical-xl.row.mb-0
+						p.c-white.ff-opensans.w-xl-50.py-20 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem.
+					a.btn.btn2.c-white(href="#") Explore more
+		section.fourth2-section 
+			.container 
+				h6.title6.left.mb-md-20.mb-10 
+					span.c-green.bg-white Practice Areas
+				.flex-md-center-between.pb-md-36
+					h2.title2.mb-24 Our Practice Areas
+					a.btn.mb-md-24.mb-40(href="#") Explore more
+				.flex-center-between.flex-wrap.pb-md-50 
+					.w-lg-50.mb-28
+						p.fs-24 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem.
+					.w-lg-50.mb-28.pl-lg-20 
+						p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam.
+				
+
+				include layout/slider2
+
