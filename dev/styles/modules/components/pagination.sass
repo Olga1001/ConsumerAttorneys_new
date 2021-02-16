@@ -24,3 +24,14 @@
 @media only screen and (min-width : 768px)     
     .pagination
         margin-top: 32px
+    
+@media only screen and (max-width: 575px)
+    .pagination 
+        li 
+            display: none 
+            &:first-child, &:nth-child(2), &:last-child, &:nth-last-child(2)
+                display: block
+                
+                
+                
+                

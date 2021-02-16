@@ -41,7 +41,7 @@ mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 		if (arrows === arrows)
 			a.disabled(href="#" title="Prev page")
 				+icon("arrow-left", "mr-16")
-				|Previous page
+				span.d-lg-block.d-none Previous page
 		ul.align-items-center
 			if numPages < display + adjacents * 2
 				- var p = 1;
@@ -81,7 +81,7 @@ mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 					li.page
 						a(href=base + 2)
 							| 2
-					li.disabled
+					li.page
 						a(href="#")
 							| &hellip;
 					- var p = currentPage - adjacents;
@@ -127,5 +127,5 @@ mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 					- p++;
 		if (arrows === arrows)
 			a(href="#" title="Next page")
-				|Next page
+				span.d-lg-block.d-none Next page
 				+icon("arrow-right","ml-16")

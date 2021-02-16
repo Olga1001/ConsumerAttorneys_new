@@ -1,0 +1,103 @@
+.main-attorneys 
+    .second2-section 
+        padding-bottom: 0
+
+.img-our-values
+    width: 100%
+    position: relative
+    z-index: 2
+
+.team-section
+    padding: 180px 0 208px
+    background-color: $bg-gray
+    margin-top: -100px
+    border-top: 1px solid $gray-100
+    
+.card-team
+    position: relative
+    width: calc(25% - 21px)
+    margin-right: 28px
+    margin-top: 48px
+    
+    &:nth-child(4n+4)
+        margin-right: 0
+        
+    &_img 
+        +box(100%,380px)
+        position: relative
+        div
+            +centerX
+            top: 0 
+            +box(100%)
+            transition: all 0.3s ease
+            overflow: hidden
+        img 
+            +box(100%)
+            object-fit: cover
+            object-position: top
+            background-color: $bg-gray-100
+            flex-shrink: 0
+    &_bottom 
+        padding: 24px 0 25px 
+        border-bottom: 1px solid $gray-100
+    &_hover
+        +centerX
+        z-index: 2 
+        top: 0 
+        +box(100%)
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.48) 100%), url(IMG_2025.jpg)
+        box-shadow: $shadow4
+        border-radius: 4px
+        padding: 24px 24px 103px
+        +d-flex(flex-start,flex-end)
+        opacity: 0 
+        pointer-events: none 
+        transition: all 0.3s ease
+    &_circle
+        border-radius: 50%
+        +d-flex(center)
+        +box(44px)
+        border: 1px solid transparent
+    &_see 
+        position: relative
+        z-index: 3
+    &:hover 
+        .card-team_hover 
+            opacity: 1 
+            pointer-events: auto
+            height: 567px
+            width: 345px
+            top: -11px
+        .card-team_img div 
+            height: 567px
+            width: 345px
+            border-radius: 4px
+            top: -11px
+        .card-team_see
+            padding-left: 20px
+        .card-team_circle
+            border-color: $green
+
+.asked-section 
+    .testimonial
+        transform: translateY(-185px)
+        margin-bottom: -130px
+
+@media only screen and (min-width : 1600px)   
+    .img-our-values
+        margin-left: -99px
+        width: calc(100% + 99px)
+
+@media only screen and (max-width : 1432px)  
+    .card-team
+        &_img 
+            height: 26.536vw
+        &_hover
+            padding: 1.676vw 1.676vw 7.193vw
+        &:hover 
+            .card-team_hover, .card-team_img div  
+                height: calc(27.536vw + 170px)
+                width: 24.092vw
+                top: -0.768vw
+            .card-team_see
+                padding-left: 1.25vw

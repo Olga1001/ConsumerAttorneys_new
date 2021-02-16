@@ -1,6 +1,6 @@
 .testimonials-section
     background: #F6F6F9
-    padding: 80px 0 60px
+    padding: 80px 0 45px
 
 .card-testimonials 
     padding: 32px 40px
@@ -10,3 +10,18 @@
     margin-bottom: 28px
     .avatar 
         +box(60px)
+
+@media only screen and (max-width: 991px)
+    .testimonials-section
+        padding: 40px 0 12px
+    .card-testimonials
+        margin-bottom: 24px
+@media only screen and (max-width: 575px)
+    .card-testimonials
+        padding-right: 20px
+        padding-left: 20px
+    .pagination
+        padding-top: 28px 
+        padding-bottom: 28px
+    .card-testimonials
+        background-position: right 20px top 20px
