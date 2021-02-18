@@ -29,7 +29,22 @@ mixin cardArticle(title,text,img,date)
 					+icon("arrow-right")
 			a.fs-24.mb-20(href="#")= title
 			p.text.fs-14= text
-
+mixin cardTeam(img,name,specialty,text)
+	.card-team 
+		.card-team_img.relative.z-2 
+			.w-100
+				img(src="img/common/"+img, alt="image")
+		.card-team_bottom 
+			p.fs-24.mb-12=name
+			.text=specialty
+			a.align-items-center.card-team_see(href="#") 
+				span.c-green.fs-14.mr-12 See profile
+				span.card-team_circle
+					+icon("arrow-right")
+		.card-team_hover 
+			div
+				p.fs-24.c-white.mb-24=name
+				p.fs-14.c-white=text 
 mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 	- adjacents = (adjacents || 1) * 1;
 	- numPages = (numPages || 10) * 1;

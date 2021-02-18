@@ -75,16 +75,24 @@ input.input, textarea.textarea
   .error-message
     display: block
 
-.form-contact
+.form2
     background: $bg-white url("../img/common/shield2.png") no-repeat left bottom / 296px 215px
     box-shadow: $shadow2
     border-radius: 0px 0px 4px 4px
     padding: 40px 28px 28px
     .circle 
         +box(44px)
+.calendar
+    .icon-calendar
+        +centerY 
+        right: 0
+        width: 40px
+        +d-flex( flex-end)
+        stroke: $dark
+        pointer-events: none
 
 @media only screen and (min-width : 576px)
-    .form-contact
+    .form2
         .w-sm-50 
             &:nth-child(even)
                 padding-left: 10px
@@ -100,7 +108,7 @@ input.input, textarea.textarea
         width: 100%
     form .btn 
         width: 100%
-    .form-contact 
+    .form2 
         padding: 30px 16px 40px 
-    .form-contact .circle
+    .form2 .circle
         +box(52px)

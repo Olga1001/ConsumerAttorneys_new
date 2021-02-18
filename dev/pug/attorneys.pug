@@ -1,0 +1,114 @@
+extends layout/main
+
+block variables
+	-var title = 'Attorneys'
+
+block content
+	main.main.main-attorneys
+		section.first2-section
+			.container
+				h1.title2.text-center Attorneys
+		section.second2-section
+			.container
+				.flex-wrap 
+					.w-lg-50.w-100.pr-lg-40.flex-lg-column.flex-column-reverse
+						h2.title2.mb-lg-48 Our values
+						.img-our-values
+					.w-lg-50.w-100.pl-lg-20
+						p.fs-24.py-md-24.py-30 Our team of experienced attorneys are dedicated to helping our clients understand and navigate every step of the case.
+						p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						a.align-items-center.pt-xl-80.pt-30.mb-xl-135(href="#") 
+							span.mr-12.c-green.fs-14 Meet our team
+							span.circle.circle3
+								+icon("arrow-long")
+		section.team-section
+			.container
+				h6.title6.left.mb-md-20.mb-10 
+					span.c-green.bg-gray Our team
+				h2.title2.mb-md-28 Meet our team
+
+				.flex-wrap.teams 
+					- 
+						team = [
+							{
+								img: 'img2.jpg',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'img3.jpg',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'empty-m.png',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'img2.jpg',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'empty-w.png',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'img2.jpg',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'img3.jpg',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+							{
+								img: 'empty-m.png',
+								name: 'Daniel C. Cohen',
+								specialty: 'Founding Partner',
+								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+							},
+						]
+					each val in team
+						+cardTeam(val.img,val.name,val.specialty,val.text)
+	
+		section.asked-section 
+			.container 
+				include layout/testimonial
+				
+				.flex-wrap.justify-content-between 
+					h2.title2.c-white.pt-md-28 Frequently <br class="d-lg-block d-none"> Asked <br class="d-lg-block d-none"> Questions
+					ul.asked-list
+						li
+							.justify-content-between.asked-action.active
+								p.c-white.lh-20 How We Can Help
+								+icon("arrow-down","c-green")
+							.asked-dropdown(style="display: block")
+								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
+						li
+							.justify-content-between.asked-action
+								p.c-white.lh-20 Sed posuere consectetur est at lobortis?
+								+icon("arrow-down","c-green")
+							.asked-dropdown
+								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
+						
+
+
+						
+
+
+
+
+
+
+						

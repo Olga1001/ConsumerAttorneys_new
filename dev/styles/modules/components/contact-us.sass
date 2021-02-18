@@ -1,0 +1,27 @@
+.contact-us 
+    background: $bg-blue-navy url("../img/common/shield4.png") no-repeat left bottom / 296px 215px
+    box-shadow: $shadow2
+    border-radius: 4px
+    padding: 32px 16px 40px 16px
+    position: relative
+    z-index: 2
+    margin-top: 50px
+    &_container 
+        max-width: 1240px 
+        margin: 0 auto
+    &:before 
+        content: ''
+        position: absolute 
+        right: 0 
+        bottom: 0 
+        +box(279px,287px)
+        background: url("../img/common/icon1.png") no-repeat center / contain
+        z-index: -1
+
+.line-basis
+    margin: 0 28px
+    width: 100%
+
+@media only screen and (min-width : 1200px)
+    .contact-us 
+        padding-top: 61px

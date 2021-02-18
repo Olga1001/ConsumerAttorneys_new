@@ -6,6 +6,9 @@
     width: 100%
     position: relative
     z-index: 2
+    background: url("../img/common/image5.jpg") no-repeat center / cover
+    width: 100%
+    height: 390px
 
 .team-section
     padding: 180px 0 208px
@@ -18,6 +21,8 @@
     width: calc(25% - 21px)
     margin-right: 28px
     margin-top: 48px
+    flex-shrink: 0
+    z-index: 1
     
     &:nth-child(4n+4)
         margin-right: 0
@@ -62,6 +67,7 @@
         position: relative
         z-index: 3
     &:hover 
+        z-index: 2
         .card-team_hover 
             opacity: 1 
             pointer-events: auto
@@ -83,12 +89,13 @@
         transform: translateY(-185px)
         margin-bottom: -130px
 
-@media only screen and (min-width : 1600px)   
+@media only screen and (min-width: 1600px)   
     .img-our-values
         margin-left: -99px
         width: calc(100% + 99px)
+        height: 440px
 
-@media only screen and (max-width : 1432px)  
+@media (min-width: 1200px) and (max-width: 1432px)  
     .card-team
         &_img 
             height: 26.536vw
@@ -101,3 +108,89 @@
                 top: -0.768vw
             .card-team_see
                 padding-left: 1.25vw
+
+@media (min-width: 1025px) and (max-width: 1199px)  
+    .img-our-values
+        margin-left: -99px
+        width: calc(100% + 99px)
+        height: 315px
+
+@media only screen and (max-width: 1199px)   
+    .card-team_img
+        height: 253px
+    .card-team:hover 
+        .card-team_img div, .card-team_hover
+            height: calc(253px + 181px)
+            width: 260px
+    .card-team:hover .card-team_see
+        padding-left: 3px
+    .main-attorneys .second2-section 
+        padding-bottom: 80px
+    .team-section
+        margin-top: 0
+        padding-top: 80px
+
+@media only screen and (max-width: 991px)   
+    .img-our-values
+        margin-bottom: 30px
+        height: 440px
+    .card-team
+        width: calc(33.33% - 19px)
+        margin-right: 28px
+        &:nth-child(4n+4)
+            margin-right: 28px
+        &:nth-child(3n+3)
+            margin-right: 0
+    .card-team_hover
+        padding: 16px 16px 100px
+    .card-team:hover .card-team_see
+        padding-left: 0
+@media only screen and (max-width: 767px)   
+    .main-attorneys .second2-section
+        padding-bottom: 45px
+    .team-section
+        padding-top: 40px
+    .teams
+        margin-top: 6px
+    .card-team
+        width: calc(50% - 12px)
+        margin-right: 24px
+        margin-top: 24px
+        &:nth-child(4n+4)
+            margin-right: 24px
+        &:nth-child(3n+3)
+            margin-right: 24px
+        &:nth-child(2n+2)
+            margin-right: 0
+    .card-team_img
+        height: 296px
+    .card-team:hover .card-team_img div, .card-team:hover .card-team_hover
+        height: calc(296px + 181px)
+        width: 280px
+    .card-team:hover .card-team_see
+        padding-left: 6px
+    .asked-section .testimonial
+        margin-bottom: -145px
+    .img-our-values 
+        height: 325px
+@media only screen and (max-width: 575px)   
+    .team-section
+        padding-bottom: 185px
+    .img-our-values
+        margin: 0 -16px 36px
+        width: calc(100% + 32px)
+        height: 74.66vw
+        background-image: url("../img/common/image6.jpg")
+    .card-team 
+        width: 100% 
+        max-width: 343px 
+        margin: 24px auto 0!important
+    .card-team_img
+        height: 328px
+    .card-team:hover .card-team_img div, .card-team:hover .card-team_hover
+        height: calc(328px + 177px)
+        width: 370px
+    .card-team:hover .card-team_see
+        padding-left: 4px
+    .card-team_bottom
+        padding-bottom: 16px

@@ -1,128 +1,167 @@
 extends layout/main
 
 block variables
-	-var title = 'Attorneys'
+	-var title = 'Attorneys-Individual'
+	-var sliderG = true
 
 block content
-	main.main.main-attorneys
+	main.main.main-individual
 		section.first2-section
+			.container.text-center
+				p.fs-20.c-white.mb-8 Attorneys
+				h1.title2 Daniel C. Cohen
+		nav.nav-breadcrumbs
 			.container
-				h1.title2.text-center Attorneys
+				ul.breadcrumbs
+					+breadcrumbs-item('Home','#')
+					+breadcrumbs-item('Attorneys','#')
+					+breadcrumbs-item('Daniel C. Cohen')
 		section.second2-section
 			.container
-				.flex-wrap 
-					.w-lg-50.pr-lg-40
-						h2.title2.mb-md-48.mb-28 Our values
-						.img-our-values
-							img(src="img/common/image5.jpg", alt="image")
-					.w-lg-50.pl-lg-20
-						p.fs-24.py-24 Our team of experienced attorneys are dedicated to helping our clients understand and navigate every step of the case.
-						p.text Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						a.align-items-center.pt-md-80.pt-28(href="#") 
-							span.mr-12.c-green.fs-14 Meet our team
-							span.circle.circle3
-								+icon("arrow-long")
-		section.team-section
+				.flex-wrap.justify-content-between
+					.col-left
+						img.img-individual(src="img/common/image8.jpg", alt="image")
+						form.form2 
+							h6.title6.left.mb-md-32.mb-20
+								span.c-green.bg-white Schedule a call
+							.flex-wrap
+								.w-sm-50.w-100
+									p.relative.mb-12 
+										label.fs-12.c-gray.mb-4 Full Name
+										input(type="text" value="" placeholder="Full name" required) 
+										span.error-message error-message
+								.w-sm-50.w-100
+									p.relative.mb-12 
+										label.fs-12.c-gray.mb-4 Phone Number
+										input(type="number" value="" placeholder="Phone number" required) 
+										span.error-message error-message
+								.w-sm-50.w-100
+									p.relative.mb-sm-12.mb-28 
+										label.fs-12.c-gray.mb-4 Email
+										input(type="email" value="" placeholder="Email address" required) 
+										span.error-message error-message
+								.w-sm-50.w-100
+									p.mb-sm-12.mb-28 
+										label.fs-12.c-gray.mb-4 Date
+										span.relative.d-block.calendar
+											input(type="date" value="" placeholder="Select date" required) 
+											+icon("calendar")
+										span.error-message error-message
+								
+							button.btn.btn5.ml-auto.align-items-center.mt-sm-26(type="submit") 
+								.circle.mr-16
+									+icon("calendar")
+								|Schedule a call
+
+					.col-right
+						h6.title6.left.mb-lg-48.mb-24
+							span.fs-12.c-green.bg-gray-100-1 About
+
+						p.fs-24.mb-28 Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.
+						p.text.mb-28 Mr. Cohen has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. He also counsels visually-impaired individuals who believe that their rights under the Americans with Disabilities Act have been violated in both physical and digital spaces.
+						p.text.mb-28 Mr. Cohen graduated from Arizona State University’s Sandra Day O’Connor College of Law and holds a bachelor of arts degree in the humanities from Thomas Edison State College. He is licensed to practice in New York and Arizona.
+						p.text.mb-28 A nationally-recognized practitioner of consumer protection law, Mr. Cohen has been an active member of both the National Association of Consumer Advocates and the National Consumer Law Center since 2017.
+						.flex-wrap.pt-12 
+							.w-lg-50.w-100
+								.align-items-center.mb-28.pb-lg-8
+									.circle.big.mr-12 
+										+icon("education","c-dark")
+									p Education
+								ul.list
+									each val in ['Thomas Edison State College – B.A.','Sandra Day O’Connor College of Law, Arizona State University – J.D.']
+										li.list-item.mb-12.fs-14=val
+							.w-lg-50.w-100.pl-lg-14
+								.align-items-center.mb-28.pb-lg-8
+									.circle.big.mr-12 
+										+icon("admissions","c-dark")
+									p Admissions
+								ul.list
+									each val in ['Arizona','District of Arizona','New York','Eastern District of New York','Southern District of New York','Northern District of New York']
+										li.list-item.mb-12.fs-14=val
+		
+		section.fourth2-section 
+			.container 
+				h6.title6.left.mb-md-20.mb-10 
+					span.c-green.bg-white Practice Areas
+				.flex-md-center-between.pb-md-36
+					h2.title2.mb-24 Practice Areas
+					a.btn.mb-md-24.mb-40(href="#") Explore our Practice Areas
+
+				include layout/slider2
+
+				include layout/contact-us
+
+		section.team-section.hidden-xy
 			.container
 				h6.title6.left.mb-md-20.mb-10 
 					span.c-green.bg-gray Our team
-				h2.title2.mb-28 Meet our team
-
-				.flex-wrap.teams 
-					- 
-						team = [
-							{
-								img: 'img2.jpg',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'img3.jpg',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'empty-m.png',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'img2.jpg',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'empty-w.png',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'img2.jpg',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'img3.jpg',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-							{
-								img: 'empty-m.png',
-								name: 'Daniel C. Cohen',
-								specialty: 'Founding Partner',
-								text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-							},
-						]
-					each val in team
-						.card-team 
-							.card-team_img.relative.z-2 
-								.w-100
-									img(src="img/common/"+val.img, alt="image")
-							.card-team_bottom 
-								p.fs-24.mb-12=val.name
-								.text=val.specialty
-								a.align-items-center.card-team_see(href="#") 
-									span.c-green.fs-14.mr-12 See profile
-									span.card-team_circle
-										+icon("arrow-right")
-							.card-team_hover 
-								div
-									p.fs-24.c-white.mb-24=val.name
-									p.fs-14.c-white=val.text 
-	
-		section.asked-section 
-			.container 
-				include layout/testimonial
-				.flex-wrap.justify-content-between 
-					h2.title2.c-white.pt-md-28 Frequently <br class="d-lg-block d-none"> Asked <br class="d-lg-block d-none"> Questions
-					ul.asked-list
-						li
-							.justify-content-between.asked-action.active
-								p.c-white.lh-20 How We Can Help
-								+icon("arrow-down","c-green")
-							.asked-dropdown(style="display: block")
-								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
-						li
-							.justify-content-between.asked-action
-								p.c-white.lh-20 Sed posuere consectetur est at lobortis?
-								+icon("arrow-down","c-green")
-							.asked-dropdown
-								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
-						
-
-
-						
-
-
-
-
-
-
-						
+				h2.title2.mb-md-28 Meet our team
+				.w-100.slider-g
+					.slider2
+						.d-flex
+							- 
+								team = [
+									{
+										img: 'img2.jpg',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'img3.jpg',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'empty-m.png',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'img2.jpg',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'empty-w.png',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'img2.jpg',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'img3.jpg',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+									{
+										img: 'empty-m.png',
+										name: 'Daniel C. Cohen',
+										specialty: 'Founding Partner',
+										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+									},
+								]
+							each val in team
+								+cardTeam(val.img,val.name,val.specialty,val.text)
+			
+				.flex-center-between.pt-md-0.pt-sm-30.pt-20
+					button.prev.slider-btn2(type="button")
+						+icon("prev", "c-green")
+					ul.dots.mx-auto
+						li.active 
+							button.bg-gray-100(type="button")
+						li 
+							button.bg-gray-100(type="button")
+						li 
+							button.bg-gray-100(type="button")
+					button.next.slider-btn2(type="button")
+						+icon("next", "c-green")

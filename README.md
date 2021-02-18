@@ -15,6 +15,8 @@
 - http://m99935yr.beget.tech/ConsumerAttorneys/credit-reporting.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/mixed-credit-reports.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/about.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/testimonials.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/attorneys.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
