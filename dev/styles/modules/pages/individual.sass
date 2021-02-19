@@ -1,11 +1,29 @@
 .img-individual
     width: 100% 
-    height: 480px 
+    // height: 480px 
     object-fit: cover
 
 .main-individual
     .team-section
-        padding: 308px 0 30px
-        margin-top: -228px
+        padding: 0 0 30px
     .second2-section
         padding-bottom: 65px
+    .fourth2-section
+        padding-bottom: 380px
+        margin-bottom: 0
+@media only screen and (max-width : 1199px)
+    .main-individual .fourth2-section
+        padding-bottom: 280px
+@media only screen and (max-width : 767px)
+    .main-individual .second2-section
+        padding-bottom: 28px
+    .main-individual .fourth2-section
+        padding-bottom: 30px
+    .main-individual 
+        .team-section
+            padding-top: 30px
+        .second2-section .col-right
+            padding-top: 12px
+@media only screen and (max-width : 575px)
+    .img-individual
+        height: 74.66vw
