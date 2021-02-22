@@ -1,0 +1,52 @@
+.news-section
+    padding: 40px 0
+    background-color: $bg-gray
+    .col-left 
+        width: 329px 
+    .col-right
+        width: calc(100% - 329px)
+        padding-left: 28px
+    .card-articles 
+        width: calc(33.33% - 19px)
+        margin: 0px 28px 28px 0
+
+.list-practice-areas
+    .icon-arrow-right
+        opacity: 0
+        transition: all 0.3s ease 
+    a:hover 
+        color: $green 
+        .icon-arrow-right
+            opacity: 1
+
+@media only screen and (min-width : 1200px)
+    .news-section .card-articles
+        &:nth-child(3n+3)
+            margin-right: 0
+
+@media (min-width : 992px) and (max-width : 1199px)
+    .news-section .card-articles
+        width: calc(50% - 14px)
+        &:nth-child(2n+2)
+            margin-right: 0
+@media only screen and (max-width : 1199px)
+    .news-section .col-left 
+        width: 260px
+    .news-section .col-right 
+        width: calc(100% - 260px) 
+@media only screen and (max-width : 991px)
+    .news-section .card-articles
+        width: 100%
+        margin: 0 0 24px 0
+@media only screen and (max-width : 767px)
+    .news-section .col-left, .news-section .col-right
+        width: 100%
+    .news-section .col-right
+        padding: 24px 0 0 0
+    .news-section
+        padding: 24px 0
+    .main-news .second2-section
+        padding: 32px 0
+
+
+            

@@ -229,7 +229,20 @@ h6, .title6
   
 .select 
   background: url("../img/common/down-arrow.svg") no-repeat right 12px center / 10px
-
+  &.arrow-r-20 
+    background-position: right 20px center
+  select 
+    appearance: none
+    width: 100%
+    border: 1px solid #EFEFF4
+    box-shadow: 0px 4px 200px -40px rgba(0, 0, 0, 0.06)
+    border-radius: 4px
+    padding: 16px 20px
+    font-size: 14px
+    font-family: 'Sora', sans-serif
+    font-style: normal
+    font-weight: normal
+    color: $green
 .text
   font-family: 'OpenSans', sans-serif
   font-size: 16px
@@ -459,6 +472,10 @@ h6, .title6
   background: $bg-green
 
 @import "modules/modules"
+
+.sticky-top
+  position: sticky 
+  top: 20px
 
 .b-1 
   border-width: 1px 

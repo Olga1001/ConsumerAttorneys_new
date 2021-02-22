@@ -1,0 +1,151 @@
+extends layout/main
+
+block variables
+	-var title = 'News'
+
+block content
+	main.main.main-news
+		section.first2-section
+			.container
+				h1.title2.text-center News
+		nav.nav-breadcrumbs
+			.container
+				ul.breadcrumbs
+					+breadcrumbs-item('Home','#')
+					+breadcrumbs-item('Practice Areas','#')
+					+breadcrumbs-item('Credit Reporting Errors','#')
+					+breadcrumbs-item('Mixed Credit Reports')
+		section.second2-section
+			.container
+				.flex-wrap.justify-content-between 
+					.col-left.d-xl-block.d-none
+						.block-video
+							.flex-center-center.z-2.relative
+								button.btn-play(type="button")
+									span.btn-play-border
+									+icon("play")
+								div 
+									p.fs-12.text-up.c-green watch now
+									p.fs-24.c-white Play video
+
+					.col-right
+						h6.title6.left.mb-lg-48.mb-24
+							span.fs-12.c-gray-200.bg-gray-100-1.align-items-center 
+								+icon("calendar","mr-12")
+								| 27.10.2020
+
+						h2.title1.c-black What does mixed mean on credit report deletion
+						
+						.block-video.d-xl-none.mt-24
+							.flex-center-center.z-2.relative
+								button.btn-play(type="button")
+									span.btn-play-border
+									+icon("play")
+								div 
+									p.fs-12.text-up.c-green watch now
+									p.fs-24.c-white Play video
+						p.text.pt-sm-30.pt-20 Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+						a.c-green.flex-center-end.pt-30(href="#") 
+							span.mr-12.fs-14 Read more
+							.circle
+								+icon("arrow-right")
+
+		section.news-section
+			.container
+				.flex-wrap 
+					.col-left 
+						.select.bg-white.arrow-r-20 
+							select 
+								option(value="All News selected") All News
+								each val in ['Credit Reporting Errors','Background Check Errors','Debt Collection Harassment and Abuse','Telemarketer Harassment','Bankruptcy','Consumer Finance Litigation','Class Actions','Data Breach Litigation','Personal Injury','Americans with Disabilities Act']
+									option(value=val)=val
+
+						.sticky-top.d-md-block.d-none
+							h6.title6.left.mb-40
+								span.c-green.bg-gray Practice areas
+							ul.list-practice-areas
+								each val in ['Credit Reporting Errors','Background Check Errors','Debt Collection Harassment and Abuse','Telemarketer Harassment','Bankruptcy','Consumer Finance Litigation','Class Actions','Data Breach Litigation','Personal Injury','Americans with Disabilities Act']
+									li.mb-24 
+										a.flex-center-between(href="#")
+											span.lh-24=val
+											+icon("arrow-right")
+
+					.col-right.flex-wrap 
+						- 
+							newCard = [
+								{
+									title: 'When an employer does a background check',
+									text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...',
+									img: 'img.jpg',
+									date: '27.10.2020'
+								},
+								{
+									title: 'How to win a debt collection lawsuit',
+									text: 'The fair debt collection practices act prohibits which of the following practices?',
+									img: 'img.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'How does a landlord do a background check',
+									text: 'Automated housing discrimination: what do landlord look for in background checks?',
+									img: 'img1.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'When an employer does a background check',
+									text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...',
+									img: 'img.jpg',
+									date: '27.10.2020'
+								},
+								{
+									title: 'How to win a debt collection lawsuit',
+									text: 'The fair debt collection practices act prohibits which of the following practices?',
+									img: 'img.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'How does a landlord do a background check',
+									text: 'Automated housing discrimination: what do landlord look for in background checks?',
+									img: 'img1.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'When an employer does a background check',
+									text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...',
+									img: 'img.jpg',
+									date: '27.10.2020'
+								},
+								{
+									title: 'How to win a debt collection lawsuit',
+									text: 'The fair debt collection practices act prohibits which of the following practices?',
+									img: 'img.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'How does a landlord do a background check',
+									text: 'Automated housing discrimination: what do landlord look for in background checks?',
+									img: 'img1.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'When an employer does a background check',
+									text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...',
+									img: 'img.jpg',
+									date: '27.10.2020'
+								},
+								{
+									title: 'How to win a debt collection lawsuit',
+									text: 'The fair debt collection practices act prohibits which of the following practices?',
+									img: 'img.jpg',
+									date: '26.10.2020'
+								},
+								{
+									title: 'How does a landlord do a background check',
+									text: 'Automated housing discrimination: what do landlord look for in background checks?',
+									img: 'img1.jpg',
+									date: '26.10.2020'
+								},
+							]
+						each val in newCard 
+							+cardArticle(val.title,val.text,val.img,val.date)
+				+pagination(adjacents, 9, 6, 1, base, arrow)

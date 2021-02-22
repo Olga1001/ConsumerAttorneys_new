@@ -29,6 +29,7 @@ mixin cardArticle(title,text,img,date)
 					+icon("arrow-right")
 			a.fs-24.mb-20(href="#")= title
 			p.text.fs-14= text
+			
 mixin cardTeam(img,name,specialty,text)
 	.card-team 
 		.card-team_img.relative.z-2 
@@ -45,6 +46,7 @@ mixin cardTeam(img,name,specialty,text)
 			div
 				p.fs-24.c-white.mb-24=name
 				p.fs-14.c-white=text 
+
 mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 	- adjacents = (adjacents || 1) * 1;
 	- numPages = (numPages || 10) * 1;
@@ -54,7 +56,7 @@ mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 
 	nav.pagination.flex-center-between
 		if (arrows === arrows)
-			a.disabled(href="#" title="Prev page")
+			a.disabled.align-items-center(href="#" title="Prev page")
 				+icon("arrow-left", "mr-16")
 				span.d-lg-block.d-none Previous page
 		ul.align-items-center
@@ -141,6 +143,6 @@ mixin pagination(adjacents, numPages, display, currentPage, base, arrow)
 									| #{p}
 					- p++;
 		if (arrows === arrows)
-			a(href="#" title="Next page")
+			a.align-items-center(href="#" title="Next page")
 				span.d-lg-block.d-none Next page
 				+icon("arrow-right","ml-16")
