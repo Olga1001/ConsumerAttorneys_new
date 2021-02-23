@@ -1,0 +1,71 @@
+extends layout/main
+
+block variables
+	-var title = 'Contact'
+
+block content
+	main.main.main-contact
+		section.first2-section
+			.container
+				h1.title2.text-center Contact Us
+		section.second2-section
+			.container
+				.justify-content-between.flex-wrap 
+					.w-lg-50.w-100.pr-lg-14 
+						form.w-100 
+							.flex-wrap.align-items-end 
+								.w-sm-50.w-100.pr-sm-14
+									p.relative.mb-12 
+										label.fs-12.c-gray.mb-4 Full Name
+										input.bg-white(type="text" value="John Smith" required) 
+										span.error-message error-message
+								.w-sm-50.w-100.pl-sm-14
+									p.relative.mb-12 
+										label.fs-12.c-gray.mb-4 Phone Number
+										input.bg-white(type="number" value="4523313423" required) 
+										span.error-message error-message
+								.w-sm-50.w-100.pr-sm-14
+									p.relative.mb-sm-12.mb-28 
+										label.fs-12.c-gray.mb-4 Email
+										input.bg-white(type="email" value="john.smith" required) 
+										span.error-message error-message
+								.w-sm-50.w-100.pl-sm-14
+									p.relative.mb-sm-12 
+										span.select
+											input.bg-white(type="email" placeholder="Subject" required) 
+										span.error-message error-message
+								.w-100.mb-16
+									.mb-28
+									p.relative.mb-12 
+										textarea(cols="20" rows="4" placeholder="Start typing here...")
+										span.error-message error-message
+							button.btn.ml-auto.d-block(type="submit") Send Message
+					 
+					.w-lg-50.w-100.pl-lg-14 
+						.block-contact.ml-lg-auto
+							.w-100
+								h6.title6.left.mb-20
+									span.c-green.bg-white Contact Us
+								.align-items-center.pt-sm-12
+									.circle.big.mr-12 
+										+icon("phone","c-dark")
+									p.fs-sm-20.fs-14 (+1) 800 604 0466
+								.align-items-center.pt-12
+									.circle.big.mr-12 
+										+icon("mail","c-dark")
+									p.fs-sm-20.fs-14 info@consumerattorneys.com
+							ul.d-flex.socials.mt-24 
+								each val in ['facebook','instagram','twitter','linkedin']
+									li 
+										a.social(href="#")
+											+icon(val, "c-white")
+
+				
+		section.fifth-section
+			img.img-union.d-lg-block.d-none(src="img/common/union.svg", alt="union")
+			.container 
+				h6.title6.left.mb-20
+					span.c-green.bg-gray Contact Us
+				h2.title2.mb-sm-24.mb-16 Office Addresses
+
+				include layout/map

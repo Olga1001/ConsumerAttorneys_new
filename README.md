@@ -20,6 +20,7 @@
 - http://m99935yr.beget.tech/ConsumerAttorneys/individual.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/news.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/news-individual.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/contact.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
