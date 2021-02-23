@@ -40,6 +40,37 @@
     box-shadow: $shadow2
     border-radius: 4px
     padding: 60px
+
+.img-shield3_v2
+    position: absolute 
+    right: -46px
+    bottom: -120px
+    z-index: -1
+    +box(304px,260px)
+
+.image1
+    max-width: 614px
+    height: 480px
+    object-fit: cover
+
+.card
+    width: calc(33.33% - 19px)
+    margin: 0 28px 28px 0
+    +block($bg-white,4px,32px 40px 32px,$shadow2) 
+    &:nth-child(3n+3)
+        margin-right: 0
+
+.ellipse 
+    +box(60px)
+    background-color: $bg-green 
+    border-radius: 50%
+    flex-shrink: 0
+    svg 
+        stroke: $white
+        +box(38px,100%)
+        margin: 0 auto
+        display: block
+        
 @media only screen and (min-width : 1200px)
     .main-about .first2-section .container 
         max-width: 1195px
