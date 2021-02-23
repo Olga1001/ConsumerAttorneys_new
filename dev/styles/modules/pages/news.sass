@@ -19,6 +19,22 @@
         .icon-arrow-right
             opacity: 1
 
+.main-news-individual 
+    background-color: $bg-gray
+    padding-top: 80px 
+    .block-video 
+        height: 540px
+        border-radius: 4px
+    .col-left
+        width: 238px
+        padding-right: 16px
+    .third2-section 
+        padding-top: 0
+
+.block-touch
+    +block()
+    border: 1px solid #E4E4EB
+
 @media only screen and (min-width : 1200px)
     .news-section .card-articles
         &:nth-child(3n+3)
@@ -34,11 +50,24 @@
         width: 260px
     .news-section .col-right 
         width: calc(100% - 260px) 
+    .main-news-individual .block-video
+        height: 500px
+    .block-touch
+        padding: 28px 16px
 @media only screen and (max-width : 991px)
     .news-section .card-articles
         width: 100%
         margin: 0 0 24px 0
+    .main-news-individual .col-left
+        width: 100%
+    .main-news-individual .block-video
+        height: 450px
 @media only screen and (max-width : 767px)
+    .main-news-individual
+        padding-top: 16px
+        .fs-40
+            font-size: 28px 
+            line-height: 40px
     .news-section .col-left, .news-section .col-right
         width: 100%
     .news-section .col-right
@@ -47,6 +76,12 @@
         padding: 24px 0
     .main-news .second2-section
         padding: 32px 0
-
+    .main-news-individual .block-video
+        height: 350px
+@media only screen and (max-width : 575px)
+    .main-news-individual .block-video
+        height: 64vw
+    .block-touch
+        margin: 0 -16px
 
             

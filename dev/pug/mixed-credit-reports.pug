@@ -21,14 +21,9 @@ block content
 			.container
 				.flex-wrap.justify-content-between 
 					.col-left
-						.block-video
-							.flex-center-center.z-2.relative
-								button.btn-play(type="button")
-									span.btn-play-border
-									+icon("play")
-								div 
-									p.fs-12.text-up.c-green watch now
-									p.fs-24.c-white Play video
+					
+						include layout/video
+
 						form.form2 
 							h6.title6.left.mb-20
 								span.c-green.bg-white Contact Us

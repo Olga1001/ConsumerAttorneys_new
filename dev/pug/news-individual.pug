@@ -1,0 +1,110 @@
+extends layout/main
+
+block variables
+	-var title = 'News - Individual'
+
+block content
+	main.main.main-news-individual
+		.container 
+			.align-item-lg-start 
+				.col-left
+					a.align-items-center.mb-24(href="#") 
+						.circle.mr-8
+							+icon("arrow-left")
+						span.fs-14 Back to News
+				.col-right.max-924.w-100
+					h2.fs-40.fw-semi.mb-24.mb-md-32  What does mixed mean on credit report <br class="d-xl-block d-none"> deletion
+					h6.title6.left.mb-lg-48.mb-24
+						span.fs-12.c-gray-200.bg-gray.align-items-center 
+							+icon("calendar","mr-12")
+							| 27.10.2020
+			.mb-md-60.mb-28.w-100
+				include layout/video
+
+			.align-item-lg-start.flex-lg-row.flex-column-reverse 
+				.col-left.d-lg-block.d-none
+					p.fs-12.c-gray-200 Share
+					.align-items-center.w-100
+						ul.socials.mt-lg-24.d-lg-block.align-items-center 
+							each val in ['facebook','instagram','twitter','linkedin']
+								li 
+									a.social.mb-lg-8(href="#")
+										+icon(val, "c-white")
+						hr.line.d-lg-none.d-block.w-100
+						
+				.col-right.max-924.w-100
+					.pb-md-24.pb-20
+						p.mb-md-32.mb-24 Sometimes a consumer’s credit report can get dragged down by dead weight ... literally.
+						p.text.mb-md-32.mb-24 Consumers’ chances of getting loans, finding housing and even locking down employment can hinge upon their credit scores -- and often negatively so when their credit reports contain mistakes.
+						p.text.mb-md-32.mb-24 So what happens if a consumer’s credit report incorrectly states that they are deceased?
+						p.text.mb-md-32.mb-24 If tales of a consumer’s death have been greatly exaggerated, they could get turned down for much-needed auto or home loans, see their credit-card spending limits drop and even miss out on job opportunities.
+						p.text.mb-md-32.mb-24 Consumers who suddenly find themselves among the walking dead may even find themselves locked out of their bank accounts and their credit histories or deprived of benefits like health insurance.
+
+					.pb-md-24.pb-20
+						p.fs-24.mb-md-32.mb-24 Your credit report may be dead wrong
+						p.text.mb-md-32.mb-24 Oftentimes, a consumer may erroneously be listed as deceased because a close relative passed away or because of typos in the Social Security Administration’s (SSA) Master Death File.
+						p.text.mb-md-32.mb-24 The SSA’s Office of the Inspector General found in a 2011 audit that about 1,000 people were mistakenly listed in the Master Death File each month, though follow-up investigations found that the number has been substantially reduced.
+						p.text.mb-md-32.mb-24 These fatal errors may also come from banks, lenders and even the three major credit reporting bureaus.
+						p.text.mb-md-32.mb-24 According to a 2013 study by the Federal Trade Commission (FTC), about one-fifth of consumers’ credit reports contained inaccurate information and 13 percent had mistakes that affected their credit scores. 
+						p.text.mb-md-32.mb-24 Five percent of reports had such glaring problems that consumers’ loan applications were getting rejected, the study found.
+						p.text.mb-md-32.mb-24 The FTC advises that consumers should regularly check their credit reports from time to time to spot irregularities and contact reporting agencies as soon as possible if anything seems amiss.  
+						p.text.mb-md-32.mb-24 Under the federal Fair Credit Reporting Act (FCRA), consumer reporting agencies are obligated to give accurate information about consumers and fix any errors after they have been identified.
+						p.text.mb-md-32.mb-24 Additionally, consumers are entitled to receive at least one free credit report from each of the agencies annually.
+						p.text.mb-md-32.mb-24 If a consumer spots a problem, the FCRA gives the bureaus 30 days to look into disputes and check if their information is accurate. And when they are tasked with putting together a consumer’s credit report, the law requires them to take reasonable steps to ensure its “maximum possible accuracy.”
+						p.text.mb-md-32.mb-24 But for falsely killed-off consumers, simply proving that they are still alive may not be enough for them to get their credit reports fixed up in a timely manner -- it could potentially take months or more of effort to get errors fixed, depending on which institution provided the inaccurate information.
+						p.text.mb-md-32.mb-24 And such a timeframe may as well be an eternity in situations where a consumer is in the process of time-sensitive matters like locking down a mortgage or applying for employment.
+
+					.pb-md-24.pb-8
+						p.fs-24.mb-md-32.mb-24 How we can help
+						p.text.mb-md-32.mb-24 If an entity has incorrectly put you six feet under, the experienced team at Consumer Attorneys can give you a shot at resurrection -- and potentially hold those responsible liable for financial compensation under the FCRA.
+						p.text.mb-md-32.mb-24 Under the law, consumers may be entitled to statutory damages of up to $1,000 per violation, as well as actual and punitive damages and even compensation for the emotional or physical pain they suffered as a result of the damage caused by faulty credit reporting.
+					.d-lg-none.mb-40.pb-md-24 
+						.align-items-center.w-100
+							ul.socials.mt-0.align-items-center 
+								each val in ['facebook','instagram','twitter','linkedin']
+									li 
+										a.social.mb-0(href="#")
+											+icon(val, "c-white")
+							hr.line.d-lg-none.d-block.w-100
+					.block-touch.mb-md-60.mb-40
+						.flex-md-center-between 
+							.max-560.mb-md-0.mb-28.text-md-left.text-center
+								p.fs-24.mb-20 Are you violated by creditors, debt collectors, or credit reporting agencies?
+								p.fs-14.c-gray-500 Call us, and we will restore your financial life back to normal.
+							a.btn(href="#") Get in touch
+		section.third2-section
+			.container
+				h6.title6.mb-28
+					span.mx-auto.bg-gray News
+				h4.fs-32.text-center.mb-sm-40 Related Articles
+				.flex-wrap.justify-content-center 
+					- 
+						cardArticles = [
+							{
+								title: 'How does a landlord do a background check',
+								text: 'Automated housing discrimination: what do landlord look for in background checks?',
+								img: 'img.jpg',
+								date: '20.01.2021'
+							},
+							{
+								title: 'What is mortgage abuse fraud',
+								text: 'Your mortgage company made a mistake? Find out how to sue your mortgage company for error reporting.',
+								img: 'img.jpg',
+								date: '20.01.2021'
+							},
+							{
+								title: 'What is robocall and how does it work',
+								text: 'How to report robocall who keep calling at night and how to stop annoying robocall?',
+								img: 'img.jpg',
+								date: '20.01.2021'
+							},
+							{
+								title: 'When an employer does a background check',
+								text: 'How do you know if you failed an employer background check? And what do if there are errors in my backgroun...',
+								img: 'img.jpg',
+								date: '20.01.2021'
+							}
+						]
+					each val, index in cardArticles
+						+cardArticle(val.title,val.text,val.img,val.date)
+				a.btn.btn2.mx-auto.mt-40(href="#") View all articles

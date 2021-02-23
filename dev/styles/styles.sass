@@ -243,6 +243,7 @@ h6, .title6
     font-style: normal
     font-weight: normal
     color: $green
+
 .text
   font-family: 'OpenSans', sans-serif
   font-size: 16px
@@ -258,6 +259,9 @@ h6, .title6
 .max-1280
   max-width: 1280px 
 
+.max-924
+  max-width: 924px 
+
 .max-956
   max-width: 956px 
 
@@ -269,12 +273,15 @@ h6, .title6
 
 .max-600
   max-width: 600px 
+  
+.max-500
+  max-width: 500px 
 
 .max-535
   max-width: 535px 
 
-.max-500
-  max-width: 500px 
+.max-560 
+  max-width: 560px 
 
 .max-444
   max-width: 444px 
@@ -379,10 +386,7 @@ h6, .title6
     flex-shrink: 0
   
 .block
-  background: $bg-white
-  box-shadow: $shadow2
-  border-radius: 4px
-  padding: 64px 0
+  +block($bg-white,4px,64px 0,$shadow2) 
   margin-top: -95px
   &-container
     max-width: 1200px 
