@@ -130,7 +130,7 @@ a
   transition: all 0.3s ease
   color: $black
   display: block
-
+  
 p a 
   display: inline 
 
@@ -229,6 +229,8 @@ h6, .title6
   
 .select 
   background: url("../img/common/down-arrow.svg") no-repeat right 12px center / 10px
+  border-radius: 4px
+  display: block 
   &.arrow-r-20 
     background-position: right 20px center
   select 
@@ -243,6 +245,16 @@ h6, .title6
     font-style: normal
     font-weight: normal
     color: $green
+
+.select-navy
+  background-image: url("../img/common/arrow-down.svg")
+  background-color: $blue-navy5
+  border: 1px solid $blue
+  color: $white
+  input 
+    border: none 
+    box-shadow: none
+    color: $white
 
 .text
   font-family: 'OpenSans', sans-serif

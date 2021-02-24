@@ -11,7 +11,7 @@ block content
 				h1.title2.text-center Why choose Consumer Attorneys?
 		section.second2-section
 			.container
-				.flex-wrap.justify-content-between 
+				.flex-wrap.justify-content-between.flex-lg-row.flex-column-reverse
 					.w-lg-50.pr-lg-14
 						p.fs-24.mb-md-48.mb-28 The rights of employees, consumers and disabled people are protected under a wide array of local, state and federal laws. Financial institutions nationwide, however, regularly violate consumer rights by utilizing their considerable resources to get off the hook by heavily litigating expensive court battles.
 						p.mb-28.text This is not what Congress intended when it passed these consumer protection statutes, \and these financial institutions must be held accountable for their malicious wrongdoings. Consumers should not be required to confront these financial institutions on their own, and Congress permitted private attorneys to step in and protect the rights of innocent consumers.
@@ -19,8 +19,8 @@ block content
 						p.mb-28.text The team at Consumer Attorneys fights for the rights of plaintiffs who have been wronged -- and will ensure that they receive just financial compensation for their injuries. 
 
 					.w-lg-50.pl-lg-14.relative.z-2 
-						img.image1.ml-auto(src="img/common/image7.jpg", alt="image")
-						img.img-shield3_v2(src="img/common/shield3.png", alt="shield")
+						img.image1(src="img/common/image7.jpg", alt="image")
+						img.img-shield3_v2.d-lg-block.d-none(src="img/common/shield3.png", alt="shield")
 
 		section.third2-section
 			.container
@@ -52,15 +52,14 @@ block content
 							hr
 							p.text=val.text
 						
-
-				h6.title6.left.mb-md-20.mb-10 
-					span.c-green.bg-gray Consumer Attorneys
-				h2.title2.mb-md-40.mb-28 Our Path To Victory 
 				.flex-wrap.justify-content-between  
 					.col-left.pt-12 
+						h6.title6.left.mb-md-20.mb-10 
+							span.c-green.bg-gray Consumer Attorneys
+						h2.title2.mb-md-40.mb-28 Our Path To Victory 
 						.mb-lg-80
-							p Consumer Attorneys begin commences the actions by first reaching out to the institution blamed for wrongdoing -- at which point it might respond with a settlement in exchange for the consumer/employee/tenant to drop their case.
-							.my-md-36.my-28
+							p.mb-md-36.mb-28 Consumer Attorneys begin commences the actions by first reaching out to the institution blamed for wrongdoing -- at which point it might respond with a settlement in exchange for the consumer/employee/tenant to drop their case.
+							.mb-md-36.mb-28
 								p.text.mb-28 But some companies faced with the threat of a court battle may try to offer a settlement amount far below what a consumer deserves for their pain and suffering. Some may refuse to pay anything at all.
 								p.text.mb-28 We won’t let bad actors get off the hook without a fight. If an institution or company refuses to be held accountable for the injuries it inflicts, Consumer Attorneys will push hard for a judge to rule in your favor and award you just compensation.
 								p.text.mb-28 If that proves to be unsuccessful, Consumer Attorneys will then demand that the matter go before a jury, which could result in an even larger payout for the consumer.
@@ -68,11 +67,11 @@ block content
 						h6.title6.left.mb-md-20.mb-10
 							span.c-green.bg-gray Consumer Attorneys
 						h2.title2.mb-md-40.mb-28 Legal Representation You Can Trust
-						p We get it -- taking an employer or a big company to court seems like a nearly impossible task. A court battle can be draining and it could be months or even years before a consumer sees the compensation they deserve.
-						.my-md-36.my-28
-							p.text But that doesn’t mean plaintiffs should suffer financial pain for taking the prudent step of hiring an attorney. Consumer Attorneys will not take a dime from a client to take on their case until it reaches a settlement or the case is resolved in favor of the plaintiff.
+						p.mb-md-36.mb-28 We get it -- taking an employer or a big company to court seems like a nearly impossible task. A court battle can be draining and it could be months or even years before a consumer sees the compensation they deserve.
+					
+						p.text But that doesn’t mean plaintiffs should suffer financial pain for taking the prudent step of hiring an attorney. Consumer Attorneys will not take a dime from a client to take on their case until it reaches a settlement or the case is resolved in favor of the plaintiff.
 					.col-right
-						form.bg-blue-navy.px-16.py-20
+						form.form3
 							.mb-28
 								.align-items-center
 									.circle.big.mr-12 
@@ -95,41 +94,10 @@ block content
 								input.input(type="email" value="john.smith@mail.com" required )
 								span.error-message error-message
 							p.mb-28.relative
-								span.select
-									input.input(type="email" placeholder="Subject" required) 
+								span.select.select-navy
+									input(type="email" placeholder="Subject" required) 
 								span.error-message error-message
 							p.mb-28.relative
 								textarea.textarea(cols="20" rows="4" placeholder="Start typing here...")
 								span.error-message error-message
 							button.btn.w-100(type="submit") Send Message
-
-
-		section.fourth2-section 
-			.container 
-				h6.title6.left.mb-md-20.mb-10 
-					span.c-green.bg-white Practice Areas
-				.flex-md-center-between.pb-md-36
-					h2.title2.mb-24 Our Practice Areas
-					a.btn.mb-md-24.mb-40(href="#") Explore more
-				include layout/slider2
-
-		section.asked-section 
-			.container 
-				.flex-wrap.justify-content-between 
-					h2.title2.c-white.pt-md-28 Frequently <br class="d-lg-block d-none"> Asked <br class="d-lg-block d-none"> Questions
-					ul.asked-list
-						li
-							.justify-content-between.asked-action.active
-								p.c-white.lh-20 How We Can Help
-								+icon("arrow-down","c-green")
-							.asked-dropdown(style="display: block")
-								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
-						li
-							.justify-content-between.asked-action
-								p.c-white.lh-20 Sed posuere consectetur est at lobortis?
-								+icon("arrow-down","c-green")
-							.asked-dropdown
-								p.fs-14.c-gray-100 The FCRA offers broad protections for consumers whose credit scores or access to loans may have been negatively affected by inaccurate information -- but it’s a complicated law, and victims of erroneous reports may find that they don’t meet certain requirements to file lawsuits against companies that are responsible for error-ridden reports. Consumers who have been unsuccessful in repeated efforts to correct their credit reports should consider hiring an attorney to take on companies that may be damaging their financial livelihoods. The team at Consumer Attorneys LLP is well versed in the complexities of the FCRA -- and will fight for consumers who find themselves being financially harmed by identity theft or by misinformation being peddled by companies and credit reporting bureaus.
-						
-
-				

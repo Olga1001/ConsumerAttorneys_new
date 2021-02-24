@@ -21,6 +21,7 @@
 - http://m99935yr.beget.tech/ConsumerAttorneys/news.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/news-individual.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/contact.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/why-choose.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
