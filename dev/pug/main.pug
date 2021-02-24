@@ -4,7 +4,7 @@ block variables
 	-var title = 'Главная страница'
 
 block content
-	main.main
+	main.main.main-home
 		section.first-section
 			.container.max-930 
 				h1.title1.text-center Protecting consumers against debt collectors, background check companies, and credit reporting agencies.
@@ -73,7 +73,7 @@ block content
 						button.prev.slider-btn(type="button")
 							+icon("prev")
 						.slider-row.hidden-xy.mx-20
-							each val in ['brand1.png', 'brand2.png', 'brand3.png', 'brand4.png']
+							each val in ['brand1.png', 'brand2.png', 'brand3.png', 'brand4.png', 'brand2.png']
 								a.slider-item(href="#")
 									img(src="img/logo/"+val, alt="brand")
 						button.next.slider-btn(type="button")
