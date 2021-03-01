@@ -22,7 +22,8 @@ block content
 				.flex-wrap.justify-content-between 
 					.col-left
 					
-						include layout/video
+						each val in ['img4.jpg']
+							+video(val)
 
 						form.form2 
 							h6.title6.left.mb-20
@@ -90,8 +91,20 @@ block content
 								p.text.mb-28 That are only listed on your credit report because the CRA mistakenly mixed another person’s credit history with your own.
 								p.text.mb-28 This misinformation may cause the lender to only offer you credit with unsatisfactory terms. Even worse, the misinformation may cause the lender to wrongfully refuse to extend you credit altogether. Besides the obvious financial damage these cases can cause, mixed credit report can wreak havoc on an individual’s personal life, causing an immense amount of unnecessary emotional distress.
 
-					.col-right
-						include layout/see-also
+					.col-right 
+
+						.see-also.mb-28 
+							.flex-center-between.mb-16 
+								p.fs-24 See also
+								.bg-green.circle3 
+									+icon("graph","c-white")
+							ul.see-also_list 
+								each val in ['Identity Theft','Bankruptcy Reporting Errors']
+									li
+										a.flex-center-between(href="#") 
+											spna.fs-14.c-green=val
+											+icon("arrow-right","c-black")
+
 						include layout/lawyer
 				.pt-md-100.pt-40
 					h6.title6.mb-28

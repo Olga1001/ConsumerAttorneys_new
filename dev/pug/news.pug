@@ -19,8 +19,8 @@ block content
 			.container
 				.flex-wrap.justify-content-between 
 					.col-left.d-xl-block.d-none
-					
-						include layout/video
+						each val in ['img1.jpg']
+							+video(val)
 
 					.col-right
 						h6.title6.left.mb-lg-48.mb-24

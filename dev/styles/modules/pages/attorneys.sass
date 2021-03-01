@@ -1,6 +1,20 @@
 .main-attorneys 
     .second2-section 
         padding-bottom: 0
+        background: $bg-gray
+        border: none
+        &:before 
+            bottom: 100px
+            border-bottom: 1px solid $gray-100
+        &:after 
+            content: ''
+            position: absolute 
+            right: -70px 
+            top: 48px
+            background: url("../img/common/union.svg") no-repeat right center/ contain
+            width: 100%
+            height: 445px
+            z-index: -1
 
 .img-our-values
     width: 100%
@@ -11,10 +25,8 @@
     height: 390px
 
 .team-section
-    padding: 180px 0 208px
+    padding: 80px 0 208px
     background-color: $bg-gray
-    margin-top: -100px
-    border-top: 1px solid $gray-100
     
 .card-team
     position: relative
@@ -126,10 +138,8 @@
         padding-left: 3px
     .main-attorneys .second2-section 
         padding-bottom: 80px
-    .team-section
-        margin-top: 0
-        padding-top: 80px
-
+    .main-attorneys .second2-section:before
+        bottom: 0
 @media only screen and (max-width: 991px)   
     .img-our-values
         margin-bottom: 30px
@@ -145,6 +155,9 @@
         padding: 16px 16px 100px
     .card-team:hover .card-team_see
         padding-left: 0
+    .main-attorneys .second2-section:after
+        right: -100px 
+        top: 50% 
 @media only screen and (max-width: 767px)   
     .main-attorneys .second2-section
         padding-bottom: 45px
@@ -194,3 +207,8 @@
         padding-left: 4px
     .card-team_bottom
         padding-bottom: 16px
+    .main-attorneys 
+        .second2-section:after 
+            right: -51px
+            top: calc(78.176vw + 30px)
+            height: 156px

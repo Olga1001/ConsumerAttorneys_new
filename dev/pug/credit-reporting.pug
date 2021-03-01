@@ -19,8 +19,8 @@ block content
 			.container
 				.flex-wrap.justify-content-between 
 					.col-left
-					
-						include layout/video
+						each val in ['img1.jpg']
+							+video(val)
 
 						form.form2 
 							h6.title6.left.mb-20
@@ -96,7 +96,17 @@ block content
 								a.btn.btn2.w-fit-content(href="#") Read more
 							hr.line.w-100
 					.col-right
-						include layout/see-also
+						.see-also.mb-28 
+							.flex-center-between.mb-16 
+								p.fs-24 See also
+								.bg-green.circle3 
+									+icon("credit","c-white")
+							ul.see-also_list 
+								each val in ['Mixed Credit Reports','Identity Theft','Bankruptcy Reporting Errors']
+									li
+										a.flex-center-between(href="#") 
+											spna.fs-14.c-green=val
+											+icon("arrow-right","c-black")
 						include layout/lawyer
 
 		section.fourth2-section 

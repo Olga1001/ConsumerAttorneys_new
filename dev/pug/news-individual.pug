@@ -19,7 +19,8 @@ block content
 							+icon("calendar","mr-12")
 							| 27.10.2020
 			.mb-md-60.mb-28.w-100
-				include layout/video
+				each val in ['img1.jpg']
+					+video(val)
 
 			.align-item-lg-start.flex-lg-row.flex-column-reverse 
 				.col-left.d-lg-block.d-none

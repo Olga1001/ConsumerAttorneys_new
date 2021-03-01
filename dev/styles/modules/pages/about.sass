@@ -13,6 +13,15 @@
             padding-left: 50px
     .second2-section
         padding: 99px 0
+        &:after 
+            content: ''
+            position: absolute 
+            right: -70px 
+            top: 100px
+            background: url("../img/common/union.svg") no-repeat right center/ contain
+            width: 100%
+            height: 445px
+            z-index: 0
     .third2-section
         padding-bottom: 240px
         .img-shield3 
@@ -88,6 +97,9 @@
         width: calc(100% - 32px)
         margin: 0 auto
         hr.vertical
+    .main-about .second2-section:after
+        right: -100px 
+        top: 50% 
             
 @media only screen and (max-width : 991px)
     .main-about .first2-section .fs-24
@@ -144,4 +156,8 @@
         height: 74.6vw
     .card
         padding: 22px 16px
+    .main-about .second2-section:after
+        right: -51px 
+        top: calc(78.176vw + 30px)
+        height: 156px
     
