@@ -12,34 +12,29 @@ block content
 			.container
 				ul.breadcrumbs
 					+breadcrumbs-item('Home','#')
-					+breadcrumbs-item('Practice Areas','#')
-					+breadcrumbs-item('Credit Reporting Errors','#')
-					+breadcrumbs-item('Mixed Credit Reports')
+					+breadcrumbs-item('News')
 		section.second2-section
 			.container
 				.flex-wrap.justify-content-between 
-					.col-left.d-xl-block.d-none
-						each val in ['img1.jpg']
+					.col-left.d-xl-block.d-none.relative
+						img.img-shield2(src="img/common/shield.png", alt="shield")
+						each val in ['img5.jpg']
 							+video(val)
 
 					.col-right
 						h6.title6.left.mb-lg-48.mb-24
-							span.fs-12.c-gray-200.bg-gray-100-1.align-items-center 
+							span.fs-12.c-gray-200.bg-gray.align-items-center 
 								+icon("calendar","mr-12")
 								| 27.10.2020
 
 						h2.title1.c-black What does mixed mean on credit report deletion
-						
-						.block-video.d-xl-none.mt-24
-							.flex-center-center.z-2.relative
-								button.btn-play(type="button")
-									span.btn-play-border
-									+icon("play")
-								div 
-									p.fs-12.text-up.c-green watch now
-									p.fs-24.c-white Play video
+
+						.d-xl-none.mt-24
+							each val in ['img5.jpg']
+								+video(val)
+					
 						p.text.pt-sm-30.pt-20 Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-						a.c-green.flex-center-end.pt-30(href="#") 
+						a.c-green.align-items-center.pt-30.w-fit-content.ml-auto(href="#") 
 							span.mr-12.fs-14 Read more
 							.circle
 								+icon("arrow-right")

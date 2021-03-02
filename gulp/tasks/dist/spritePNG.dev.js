@@ -14,7 +14,7 @@ module.exports = function spritePNG() {
   // Генерируем спрайт
   var spriteData = gulp.src('dev/img/sprite/png/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
-    imgPath: '../img/sprite/sprite.png',
+    imgPath: '/img/sprite/sprite.png',
     cssName: 'sprite.sass',
     padding: 5,
     cssVarMap: function cssVarMap(sprite) {

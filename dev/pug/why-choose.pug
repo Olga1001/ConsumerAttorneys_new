@@ -9,10 +9,18 @@ block content
 		section.first2-section
 			.container
 				h1.title2.text-center Why choose Consumer Attorneys?
+		nav.nav-breadcrumbs
+			.container
+				ul.breadcrumbs
+					+breadcrumbs-item('Home','#')
+					+breadcrumbs-item('About','#')
+					+breadcrumbs-item('Why Choose Us')
 		section.second2-section
 			.container
 				.flex-wrap.justify-content-between.flex-lg-row.flex-column-reverse
-					.w-lg-50.pr-lg-14
+					.w-lg-50.pr-lg-14.relative.z-2
+						img.img-union2(src="img/common/union.svg", alt="union")
+
 						p.fs-24.mb-md-48.mb-28 The rights of employees, consumers and disabled people are protected under a wide array of local, state and federal laws. Financial institutions nationwide, however, regularly violate consumer rights by utilizing their considerable resources to get off the hook by heavily litigating expensive court battles.
 						p.mb-28.text This is not what Congress intended when it passed these consumer protection statutes, \and these financial institutions must be held accountable for their malicious wrongdoings. Consumers should not be required to confront these financial institutions on their own, and Congress permitted private attorneys to step in and protect the rights of innocent consumers.
 

@@ -9,6 +9,12 @@ block content
 		section.first2-section
 			.container
 				h1.title2.text-center Testimonials
+		nav.nav-breadcrumbs
+			.container
+				ul.breadcrumbs
+					+breadcrumbs-item('Home','#')
+					+breadcrumbs-item('About Us','#')
+					+breadcrumbs-item('Testimonials')
 		section.testimonials-section
 			.container
 				.flex-wrap 

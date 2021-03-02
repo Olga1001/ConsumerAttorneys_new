@@ -228,11 +228,21 @@ h6, .title6
       width: 28px
   
 .select 
-  background: url("../img/common/down-arrow.svg") no-repeat right 12px center / 10px
   border-radius: 4px
   display: block 
+  position: relative 
+  &:before 
+    content: ''
+    +centerY 
+    right: 12px 
+    +box(10px)
+    background: url("../img/common/down-arrow.svg") no-repeat center / contain
+    z-index: 2
+    pointer-events: none
   &.arrow-r-20 
     background-position: right 20px center
+  &.select.navy:before 
+    background-image: url("../img/common/arrow-down.svg")
   select 
     appearance: none
     width: 100%
@@ -486,6 +496,13 @@ h6, .title6
   width: 100% 
   height: 1px
   background: $bg-green
+
+.img-union2 
+  position: absolute 
+  left: -180px 
+  top: 0
+  +box(436.47px, 445px)
+  z-index: -1
 
 @import "modules/modules"
 
