@@ -226,7 +226,7 @@ h6, .title6
     padding: 0
     svg 
       width: 28px
-  
+
 .select 
   border-radius: 4px
   display: block 
@@ -494,6 +494,20 @@ h6, .title6
   +box(436.47px, 445px)
   z-index: -1
 
+.shadow-for
+  position: relative
+  z-index: 2
+  &:before
+    content: ''
+    position: absolute 
+    left: 0 
+    bottom: 0 
+    z-index: -1
+    height: 120px 
+    width: 100%
+    pointer-events: none
+    background: linear-gradient(to top, #F7F7FA, rgba(#F7F7FA, 0.9) 60%, rgba(#F7F7FA, 0.2))
+    
 @import "modules/modules"
 
 .sticky-top
