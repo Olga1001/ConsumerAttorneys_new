@@ -27,6 +27,7 @@
 - http://m99935yr.beget.tech/ConsumerAttorneys/notification-individual.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/notification-mixed-credit-reports.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/notification-why-choose.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/terms-of-use.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`
