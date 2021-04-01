@@ -159,76 +159,76 @@ block content
 										span.error-message error-message
 							button.btn.ml-auto.d-block.mt-16(type="submit") Send Message
 								.hidden-xy
-
-				h6.title6.left.mb-md-20.mb-10 
-					span.c-green.bg-gray Our team
-				h2.title2.mb-md-28 Meet our team
-				.w-100.slider-g
-					.slider2
-						.d-flex
-							- 
-								team = [
-									{
-										img: 'img2.jpg',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'img3.jpg',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'empty-m.png',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'img2.jpg',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'empty-w.png',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'img2.jpg',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'img3.jpg',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-									{
-										img: 'empty-m.png',
-										name: 'Daniel C. Cohen',
-										specialty: 'Founding Partner',
-										text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
-									},
-								]
-							each val in team
-								+cardTeam(val.img,val.name,val.specialty,val.text)
-			
-				.flex-center-between.pt-md-0.pt-sm-30.pt-20
-					button.prev.slider-btn2(type="button")
-						+icon("prev", "c-green")
-					ul.dots.mx-auto.pt-md-40.pt-0
-						li.active 
-							button.bg-gray-100(type="button")
-						li 
-							button.bg-gray-100(type="button")
-						li 
-							button.bg-gray-100(type="button")
-					button.next.slider-btn2(type="button")
-						+icon("next", "c-green")
+				.hidden-xy
+					h6.title6.left.mb-md-20.mb-10 
+						span.c-green.bg-gray Our team
+					h2.title2.mb-md-28 Meet our team
+					.w-100.slider-g
+						.slider2
+							.d-flex
+								- 
+									team = [
+										{
+											img: 'img2.jpg',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'img3.jpg',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'empty-m.png',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'img2.jpg',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'empty-w.png',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'img2.jpg',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'img3.jpg',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+										{
+											img: 'empty-m.png',
+											name: 'Daniel C. Cohen',
+											specialty: 'Founding Partner',
+											text: 'Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.'
+										},
+									]
+								each val in team
+									+cardTeam(val.img,val.name,val.specialty,val.text)
+				
+					.flex-center-between.pt-md-0.pt-sm-30.pt-20
+						button.prev.slider-btn2(type="button")
+							+icon("prev", "c-green")
+						ul.dots.mx-auto.pt-md-40.pt-0
+							li.active 
+								button.bg-gray-100(type="button")
+							li 
+								button.bg-gray-100(type="button")
+							li 
+								button.bg-gray-100(type="button")
+						button.next.slider-btn2(type="button")
+							+icon("next", "c-green")
