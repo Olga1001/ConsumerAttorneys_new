@@ -36,8 +36,18 @@ block content
 								.align-items-center.pt-12
 									.circle.mr-12 
 										+icon("mail","c-dark")
-									p.fs-sm-16.fs-14 info@consumerattorneys.com 
-							.w-100
+									p.fs-sm-16.fs-14 info@consumerattorneys.com
+							.notification
+								.notification-circle.notification-circle_green
+									+icon("check","c-green")
+								p.fs-14.fw-semi Thank you for your message. It has been sent.
+							.notification
+								.notification-circle.notification-circle_red
+									+icon("close","c-red")
+								div
+									p.fs-14.fw-semi One or more fields have an error.
+									p.fs-14.ff-opensans Please check and try again.
+							.w-100.d-none
 								.flex-wrap.align-items-end 
 									.w-sm-50.w-100
 										p.relative.mb-12 

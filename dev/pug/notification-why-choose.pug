@@ -88,8 +88,18 @@ block content
 								.align-items-center.pt-12 
 									.circle.big.mr-12 
 										+icon("mail","c-white")
-									p.fs-14.c-white info@consumerattorneys.com 
-							.w-100
+									p.fs-14.c-white info@consumerattorneys.com
+							.notification.dark
+								.notification-circle.notification-circle_green
+									+icon("check","c-green")
+								p.fs-14.fw-semi Thank you for your message. It has been sent.
+							.notification.dark
+								.notification-circle.notification-circle_red
+									+icon("close","c-red")
+								div
+									p.fs-14.fw-semi One or more fields have an error.
+									p.fs-14.ff-opensans Please check and try again.
+							.w-100.d-none
 								p.mb-12.relative 
 									label.form-label Full Name
 									input.input(type="text" value="John Smith" required )

@@ -22,6 +22,11 @@
 - http://m99935yr.beget.tech/ConsumerAttorneys/news-individual.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/contact.html
 - http://m99935yr.beget.tech/ConsumerAttorneys/why-choose.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/notification-contact.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/notification-credit-reporting.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/notification-individual.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/notification-mixed-credit-reports.html
+- http://m99935yr.beget.tech/ConsumerAttorneys/notification-why-choose.html
 
 # Стартовый шаблон
 Используется связка `Gulp` + `Pug` + `SASS` + `BrowserSync` + `Linters`

@@ -23,35 +23,36 @@ block content
 						img.img-individual(src="img/common/image8.jpg", alt="image")
 						form.form2 
 							h6.title6.left.mb-md-32.mb-28
-								span.c-green.bg-white Schedule a call
-							.flex-wrap
-								.w-sm-50.w-100
-									p.relative.mb-12 
-										label.fs-12.c-gray.mb-4 Full Name
-										input(type="text" value="" placeholder="Full name" required) 
-										span.error-message error-message
-								.w-sm-50.w-100
-									p.relative.mb-12 
-										label.fs-12.c-gray.mb-4 Phone Number
-										input(type="number" value="" placeholder="Phone number" required) 
-										span.error-message error-message
-								.w-sm-50.w-100
-									p.relative.mb-12
-										label.fs-12.c-gray.mb-4 Email
-										input(type="email" value="" placeholder="Email address" required) 
-										span.error-message error-message
-								.w-sm-50.w-100
-									p.mb-sm-12.mb-28 
-										label.fs-12.c-gray.mb-4 Date
-										span.relative.d-block.calendar
-											input(type="date" value="" placeholder="Select date" required) 
-											+icon("calendar")
-										span.error-message error-message
-								
-							button.btn.btn5.ml-auto.flex-center-center.mt-sm-26(type="submit") 
-								.circle.mr-16
-									+icon("calendar")
-								|Schedule a call
+								span.c-green.bg-white Schedule a call 
+							.w-100
+								.flex-wrap
+									.w-sm-50.w-100
+										p.relative.mb-12 
+											label.fs-12.c-gray.mb-4 Full Name
+											input(type="text" value="" placeholder="Full name" required) 
+											span.error-message error-message
+									.w-sm-50.w-100
+										p.relative.mb-12 
+											label.fs-12.c-gray.mb-4 Phone Number
+											input(type="number" value="" placeholder="Phone number" required) 
+											span.error-message error-message
+									.w-sm-50.w-100
+										p.relative.mb-12
+											label.fs-12.c-gray.mb-4 Email
+											input(type="email" value="" placeholder="Email address" required) 
+											span.error-message error-message
+									.w-sm-50.w-100
+										p.mb-sm-12.mb-28 
+											label.fs-12.c-gray.mb-4 Date
+											span.relative.d-block.calendar
+												input(type="date" value="" placeholder="Select date" required) 
+												+icon("calendar")
+											span.error-message error-message
+									
+								button.btn.btn5.ml-auto.flex-center-center.mt-sm-26(type="submit") 
+									.circle.mr-16
+										+icon("calendar")
+									|Schedule a call
 
 					.col-right
 						h6.title6.left.mb-lg-48.mb-24

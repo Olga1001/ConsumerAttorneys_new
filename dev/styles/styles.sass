@@ -508,6 +508,48 @@ h6, .title6
     pointer-events: none
     background: linear-gradient(to top, #F7F7FA, rgba(#F7F7FA, 0.9) 60%, rgba(#F7F7FA, 0.2))
     
+.notification
+  padding: 14px 16px 
+  +d-flex(flex-start, center)
+  background: $bg-white
+  border-color: #EFEFF4
+  box-shadow: 0px 4px 60px -20px rgba(0, 0, 0, 0.08)
+  border-radius: 8px
+  margin-bottom: 20px
+  max-width: 412px
+  min-height: 72px
+  &-circle 
+    border-width: 1px 
+    border-style: solid 
+    border-radius: 50%
+    flex-shrink: 0
+    +box(40px)
+    margin-right: 16px
+    svg 
+      +box(12px,100%)
+      margin: 0 auto 
+      display: block
+    &_green
+      background: #EAFFEB
+      border-color: $green
+    &_red
+      border-color: $red
+      background: #FFF1F1
+  &.dark 
+    background: #363D88
+    border: 1px solid #474E9E
+    box-shadow: 0px 4px 60px -28px rgba(0, 0, 0, 0.4)
+    .notification-circle_green
+      background: $green4
+      border-color: $green4
+    .notification-circle_red
+      background: $red
+      border-color: $red
+    svg 
+      stroke: $white
+    p 
+      color: $white
+
 @import "modules/modules"
 
 .sticky-top
