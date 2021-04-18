@@ -256,12 +256,6 @@ h6, .title6
     font-weight: normal
     color: $green
 
-.text
-  font-family: 'OpenSans', sans-serif
-  font-size: 16px
-  line-height: 28px
-  color: $brown
-
 .container 
   max-width: $desktop
   width: 100% 
@@ -409,8 +403,7 @@ h6, .title6
   &-item
     position: relative
     padding-left: 29px
-    
-    lihe: 22px
+    line-height: 22px
     font-family: 'OpenSans', sans-serif
     &:before 
       content: ''
@@ -419,6 +412,12 @@ h6, .title6
       left: 0 
       background: url("../img/common/shield.svg") no-repeat center / contain
       +box(13px)
+
+.text
+  font-family: 'OpenSans', sans-serif
+  font-size: 16px
+  line-height: 28px
+  color: $brown
 
 .table, table 
   background: $bg-white
@@ -554,7 +553,7 @@ h6, .title6
 
 .sticky-top
   position: sticky 
-  top: 20px
+  top: 98px
 
 .b-1 
   border-width: 1px 

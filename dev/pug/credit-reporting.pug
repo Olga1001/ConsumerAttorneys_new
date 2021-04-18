@@ -17,10 +17,14 @@ block content
 					+breadcrumbs-item('Credit Reporting Errors')
 		section.second2-section
 			.container
+				.d-xl-none.mb-40
+					each val in ['img1.jpg']
+						+video(val)
 				.flex-wrap.justify-content-between 
 					.col-left
-						each val in ['img1.jpg']
-							+video(val)
+						.d-xl-block.d-none
+							each val in ['img1.jpg']
+								+video(val)
 
 						form.form2 
 							h6.title6.left.mb-20
@@ -70,6 +74,10 @@ block content
 
 						p.fs-24.mb-sm-48.mb-28 Credit reports are a necessary evil for consumers to access loans and mortgages, but errors contained within -- be they the result of identity theft or just poor record keeping by creditors -- can block them from getting capital or force them to pay more for higher interest rates.
 						p.text.mb-28 The Federal Trade Commission found in a 2013 study that 21 percent of consumers’ credit reports contained inaccurate information, 13 percent had mistakes that affected their credit scores -- and that 5 percent had such glaring problems that they caused loan applications to be denied.
+						
+						ul.list.mb-28 
+							each val in ['Contain information about a different person (e.g., a “mismatch” or a false positive);','Include sealed, expunged, or obsolete records;','Report incomplete information (e.g., omit disposition data);','Display data in misleading ways (e.g., report a single arrest or incident multiple times);','Misclassify the type of offense.']
+								li.list-item.text=val
 						p.text.mb-28 Fortunately for consumers, they are protected by law when inaccurate information ends up in their credit reports. Under the federal Fair Credit Reporting Act (FCRA), consumer reporting agencies and the companies that provide them with consumers’ data are required to convey accurate information and fix errors once after they have been disputed.
 						p.text.mb-28 Consumers should check their credit reports from time to time to search for any irregularities and let reporting agencies know as soon as possible if things are amiss. But according to the National Consumer Law Center, consumers simply disputing inaccurate information in their credit reports might not be enough to clear their records.
 						p.text.mb-28 With help from attorneys from Cohen & Mizrahi, consumers may be able to fix errors in their credit reports in a timely manner and potentially obtain compensation for damages caused by the mistakes.
@@ -99,18 +107,19 @@ block content
 								a.btn.btn2.w-fit-content(href="#") Read more
 							hr.line.w-100
 					.col-right
-						.see-also.mb-28 
-							.flex-center-between.mb-16 
-								p.fs-24 See also
-								.bg-green.circle3 
-									+icon("credit","c-white")
-							ul.see-also_list 
-								each val in ['Mixed Credit Reports','Identity Theft','Bankruptcy Reporting Errors']
-									li
-										a.flex-center-between(href="#") 
-											spna.fs-14.c-green=val
-											+icon("arrow-right","c-black")
-						include layout/lawyer
+						.sticky-top 
+							.see-also.mb-28 
+								.flex-center-between.mb-16 
+									p.fs-24 See also
+									.bg-green.circle3 
+										+icon("credit","c-white")
+								ul.see-also_list 
+									each val in ['Mixed Credit Reports','Identity Theft','Bankruptcy Reporting Errors']
+										li
+											a.flex-center-between(href="#") 
+												spna.fs-14.c-green=val
+												+icon("arrow-right","c-black")
+							include layout/lawyer
 
 		section.fourth2-section 
 			.container 

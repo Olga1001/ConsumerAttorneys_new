@@ -12,7 +12,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header-container">
+        <div class="header-container d-none">
           <div class="flex-xl-center-end d-none"> 
             <ul class="menutop">
               <li class="menutop-item"> <a class="menutop-link" href="#">Covid-19</a></li>
@@ -171,18 +171,35 @@
           </nav>
           <section class="second2-section">
             <div class="container">
+              <div class="d-xl-none mb-40">
+                <div class="block-video"><img class="block-video_img" src="img/common/img4.jpg" alt=""/>
+                  <div class="flex-center-center z-2 relative">
+                    <button class="btn-play" type="button"><span class="btn-play-border"></span>
+                      <svg class="svg-sprite-icon icon-play">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                    <div> 
+                      <p class="fs-12 text-up c-green">watch now</p>
+                      <p class="fs-24 c-white">Play video</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="flex-wrap justify-content-between"> 
                 <div class="col-left">
-                  <div class="block-video"><img class="block-video_img" src="img/common/img4.jpg" alt=""/>
-                    <div class="flex-center-center z-2 relative">
-                      <button class="btn-play" type="button"><span class="btn-play-border"></span>
-                        <svg class="svg-sprite-icon icon-play">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#play"></use>
-                        </svg>
-                      </button>
-                      <div> 
-                        <p class="fs-12 text-up c-green">watch now</p>
-                        <p class="fs-24 c-white">Play video</p>
+                  <div class="d-xl-block d-none">
+                    <div class="block-video"><img class="block-video_img" src="img/common/img4.jpg" alt=""/>
+                      <div class="flex-center-center z-2 relative">
+                        <button class="btn-play" type="button"><span class="btn-play-border"></span>
+                          <svg class="svg-sprite-icon icon-play">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#play"></use>
+                          </svg>
+                        </button>
+                        <div> 
+                          <p class="fs-12 text-up c-green">watch now</p>
+                          <p class="fs-24 c-white">Play video</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -274,36 +291,38 @@
                   </div>
                 </div>
                 <div class="col-right"> 
-                  <div class="see-also mb-28"> 
-                    <div class="flex-center-between mb-16"> 
-                      <p class="fs-24">See also</p>
-                      <div class="bg-green circle3"> 
-                        <svg class="svg-sprite-icon icon-graph c-white">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#graph"></use>
-                        </svg>
+                  <div class="sticky-top"> 
+                    <div class="see-also mb-28"> 
+                      <div class="flex-center-between mb-16"> 
+                        <p class="fs-24">See also</p>
+                        <div class="bg-green circle3"> 
+                          <svg class="svg-sprite-icon icon-graph c-white">
+                            <use xlink:href="img/sprite/symbol/sprite.svg#graph"></use>
+                          </svg>
+                        </div>
                       </div>
+                      <ul class="see-also_list"> 
+                        <li><a class="flex-center-between" href="#"> 
+                            <spna class="fs-14 c-green">Identity Theft</spna>
+                            <svg class="svg-sprite-icon icon-arrow-right c-black">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                            </svg></a></li>
+                        <li><a class="flex-center-between" href="#"> 
+                            <spna class="fs-14 c-green">Bankruptcy Reporting Errors</spna>
+                            <svg class="svg-sprite-icon icon-arrow-right c-black">
+                              <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
+                            </svg></a></li>
+                      </ul>
                     </div>
-                    <ul class="see-also_list"> 
-                      <li><a class="flex-center-between" href="#"> 
-                          <spna class="fs-14 c-green">Identity Theft</spna>
-                          <svg class="svg-sprite-icon icon-arrow-right c-black">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
-                          </svg></a></li>
-                      <li><a class="flex-center-between" href="#"> 
-                          <spna class="fs-14 c-green">Bankruptcy Reporting Errors</spna>
-                          <svg class="svg-sprite-icon icon-arrow-right c-black">
-                            <use xlink:href="img/sprite/symbol/sprite.svg#arrow-right"></use>
-                          </svg></a></li>
-                    </ul>
-                  </div>
-                  <div class="lawyer">
-                    <div class="align-items-center lawyer-row"> <img class="lawyer-avatar mr-16" src="img/common/avatar2.jpg" alt="avatar">
-                      <div> 
-                        <p class="fs-12 c-white text-up c-gray-200 mb-4">Credit Reporting Errors</p>
-                        <h4 class="fs-24 fw-semi c-white">Daniel C. Cohen</h4>
+                    <div class="lawyer">
+                      <div class="align-items-center lawyer-row"> <img class="lawyer-avatar mr-16" src="img/common/avatar2.jpg" alt="avatar">
+                        <div> 
+                          <p class="fs-12 c-white text-up c-gray-200 mb-4">Credit Reporting Errors</p>
+                          <h4 class="fs-24 fw-semi c-white">Daniel C. Cohen</h4>
+                        </div>
                       </div>
+                      <div class="text c-white my-28">Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.</div><a class="btn" href="#">Get in touch</a>
                     </div>
-                    <div class="text c-white my-28">Daniel C. Cohen is a founding partner of Consumer Attorneys LLP and co-chairs the firm’s Consumer Finance Litigation practice. Mr. Cohen also manages the firm’s client intake and development efforts.</div><a class="btn" href="#">Get in touch</a>
                   </div>
                 </div>
               </div>
